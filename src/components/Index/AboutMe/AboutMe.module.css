@@ -1,0 +1,109 @@
+.Container {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 0 86px;
+}
+
+.ContentWrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.ContentWrapper > div {
+  margin: 0 50px;
+  width: 100%;
+}
+
+.ImageWrapper img {
+  width: 300px;
+  margin-bottom: 20px;
+  height: auto;
+}
+
+.Role {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.Role div {
+  position: relative;
+  margin-right: 25px;
+  transition: all 0.15s ease-in-out;
+}
+
+.Role:hover div {
+  transform: scale(1.1);
+}
+
+.Role div,
+.Role img {
+  width: 80px;
+  height: 80px;
+}
+
+.Role h3 {
+  color: var(--black-text);
+}
+
+.RoleList {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.Profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 50%;
+}
+
+.ContainerWrapper {
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .Container {
+    padding-top: 30px;
+    padding-bottom: 25px;
+  }
+
+  .ContentWrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ImageWrapper img {
+    width: 200px;
+  }
+
+  .Role {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .Role div {
+    margin-right: 0px;
+  }
+
+  .Role img {
+    margin: 0;
+  }
+}
+
+@media (min-width: 900px) {
+  .ContainerWrapper {
+    width: 740px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .ContainerWrapper {
+    width: 960px;
+  }
+}

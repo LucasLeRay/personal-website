@@ -1,0 +1,18 @@
+.Container a {
+  text-decoration: none;
+  color: white;
+  font-size: 22px;
+  font-weight: 700;
+  margin-right: 26px;
+}
+
+@media (max-width: 750px) {
+  .Container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .Container a:last-child {
+    margin-right: 0;
+  }
+}

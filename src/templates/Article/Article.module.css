@@ -1,0 +1,62 @@
+.Container {
+  color: var(--black-text);
+}
+
+.Data {
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+}
+
+.TimeRead {
+  color: var(--grey-text);
+}
+
+.Social {
+  display: flex;
+  margin-left: 8px;
+}
+
+.Social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Social img {
+  height: 36px;
+}
+
+.Content {
+  padding: 0 480px;
+}
+
+.Content h1 {
+  font-size: 64px;
+  margin: 0;
+}
+
+.Content p {
+  font-size: 22px;
+  line-height: 36px;
+}
+
+.Content hr {
+  display: none;
+}
+
+.Content a {
+  color: var(--primary-color);
+}
+
+.ArticleBody {
+  margin: 64px 0;
+}
+
+.Share {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--black-text);
+  display: flex;
+  align-items: center;
+}

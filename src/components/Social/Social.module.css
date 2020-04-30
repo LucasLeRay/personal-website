@@ -1,0 +1,39 @@
+.Container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  z-index: 1;
+}
+
+.Container img {
+  height: 48px;
+  width: 48px;
+  cursor: pointer;
+  margin-left: 15px;
+  transition: all 0.15s ease-in-out;
+}
+
+.Container img:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 800px) {
+  .Container {
+    bottom: 90px;
+    right: 32px;
+    top: unset;
+  }
+
+  .Container img {
+    height: 36px;
+    width: 36px;
+  }
+}
+
+@media (max-width: 550px) {
+  .Container {
+    display: none;
+  }
+}

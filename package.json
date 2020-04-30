@@ -14,7 +14,10 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "@bit/lucasleray.landing-stuff.moving-wave": "^0.0.1",
     "gatsby": "^2.21.0",
+    "gatsby-source-filesystem": "^2.3.0",
+    "gatsby-transformer-remark": "^2.8.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },

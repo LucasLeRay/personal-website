@@ -1,0 +1,131 @@
+.Container {
+  background: linear-gradient(to left top, #f7830c, #c52068);
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  padding: 48px 320px 0;
+  height: 100vh;
+}
+
+.WaveWrapper {
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+}
+
+.Intro {
+  margin: 80px 0 0 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.Intro h1 {
+  color: var(--white-text);
+  font-weight: 800;
+  font-size: 72px;
+  margin: 0 0 10px;
+}
+
+.Intro h1 img {
+  height: 72px;
+  width: 72px;
+}
+
+.Intro h2 {
+  font-weight: 400;
+  color: var(--white-text);
+  font-size: 30px;
+  line-height: 40px;
+}
+
+.Intro h2 img {
+  height: 30px;
+  width: 30px;
+}
+
+.Intro > h2 > a {
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+}
+
+@media (max-width: 1600px) {
+  .Container {
+    padding: 48px calc((100vw - 900px) / 2) 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .Intro {
+    margin: 60px 0 0 0;
+  }
+
+  .Intro h2 {
+    font-size: 24px;
+  }
+
+  .Intro h2 img {
+    height: 24px;
+    width: 24px;
+  }
+}
+
+@media (max-width: 1120px) {
+  .Container {
+    padding: 48px calc((100vw - 720px) / 2) 0;
+  }
+}
+
+@media (max-width: 950px) {
+  .Container {
+    padding: 48px calc((100vw - 540px) / 2) 0;
+    height: 600px;
+    position: relative;
+  }
+
+  .Intro h1 {
+    font-size: 40px;
+  }
+
+  .Intro h2 {
+    font-size: 20px;
+    line-height: 36px;
+  }
+
+  .Intro h1 img {
+    height: 40px;
+    width: 40px;
+  }
+
+  .Intro h2 img {
+    height: 20px;
+    width: 20px;
+  }
+}
+
+@media (max-width: 750px) {
+  .Container {
+    padding: 48px 48px 0;
+  }
+
+  .Intro h1 {
+    text-align: center;
+    font-size: 32px;
+  }
+
+  .Intro h2 {
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .Intro h1 img {
+    height: 32px;
+    width: 32px;
+  }
+
+  .Intro h2 img {
+    height: 18px;
+    width: 18px;
+  }
+}
