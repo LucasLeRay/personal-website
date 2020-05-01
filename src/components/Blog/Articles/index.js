@@ -1,4 +1,5 @@
 import React from "react"
+import HotArticleCard from "../HotArticleCard"
 import ArticleCard from "../ArticleCard"
 import {
   Container,
@@ -10,8 +11,7 @@ function Articles({ hotPost, posts }) {
   return (
     <div className={Container}>
       <div className={HotArticleWrapper}>
-        <ArticleCard
-          hot
+        <HotArticleCard
           path={hotPost.path}
           cover={hotPost.cover}
           title={hotPost.title}

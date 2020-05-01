@@ -14,7 +14,6 @@ import Footer from "../../components/Footer"
 
 export default function Template({ data }) {
   const { markdownRemark } = data
-  console.log(data)
   const {
     frontmatter: { title, cover, time, path },
     html,
@@ -31,10 +30,10 @@ export default function Template({ data }) {
           <span className={TimeRead}>{`${time} min read -`}</span>
           <div className={Social}>
             <a href={twitterLink} target="_blank" rel="noopener noreferrer">
-              <img src="/img/twitter.png" />
+              <img alt="twitter" src="/img/twitter.png" />
             </a>
             <a href={facebookLink} target="_blank" rel="noopener noreferrer">
-              <img src="/img/facebook.png" />
+              <img alt="facebook" src="/img/facebook.png" />
             </a>
           </div>
         </div>
@@ -46,10 +45,10 @@ export default function Template({ data }) {
           Share on
           <div className={Social}>
             <a href={twitterLink} target="_blank" rel="noopener noreferrer">
-              <img src="/img/twitter.png" />
+              <img alt="twitter" src="/img/twitter.png" />
             </a>
             <a href={facebookLink} target="_blank" rel="noopener noreferrer">
-              <img src="/img/facebook.png" />
+              <img alt="facebook" src="/img/facebook.png" />
             </a>
           </div>
         </div>

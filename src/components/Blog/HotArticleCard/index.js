@@ -4,14 +4,20 @@ import { Link } from "gatsby"
 
 import {
   Container,
+  Hot,
   LeftPart,
   RightPart,
   TimeRead,
-} from "./ArticleCard.module.css"
+} from "./HotArticleCard.module.css"
+import fire from "./fire.png"
 
-function ArticleCard({ cover, title, body, path, time }) {
+function HotArticleCard({ cover, title, body, path, time }) {
   return (
     <div className={Container}>
+      <div className={Hot}>
+        <img src={fire} alt="fire" />
+        New
+      </div>
       <div className={LeftPart}>
         <Link to={path}>
           <img alt={title} src={cover} />
@@ -32,7 +38,7 @@ function ArticleCard({ cover, title, body, path, time }) {
   )
 }
 
-ArticleCard.propTypes = {
+HotArticleCard.propTypes = {
   cover: string.isRequired,
   title: string.isRequired,
   body: string.isRequired,
@@ -40,4 +46,4 @@ ArticleCard.propTypes = {
   path: string.isRequired,
 }
 
-export default ArticleCard
+export default HotArticleCard

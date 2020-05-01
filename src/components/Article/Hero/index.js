@@ -16,7 +16,6 @@ function Hero({ cover }) {
     ), url(${cover})`,
       }}
     >
-      <div></div>
       <Header />
       <MovingWave className={WaveWrapper} />
     </section>

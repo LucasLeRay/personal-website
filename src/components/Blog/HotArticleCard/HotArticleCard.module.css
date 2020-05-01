@@ -1,0 +1,182 @@
+.Container {
+  width: 100%;
+  height: 320px;
+  margin: 52px 0;
+  position: relative;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.16);
+  display: flex;
+  background-color: white;
+}
+
+.Container a {
+  text-decoration: none;
+}
+
+.Container .LeftPart {
+  width: 40%;
+}
+
+.LeftPart img {
+  width: 100%;
+}
+
+.Container .LeftPart img {
+  height: 320px;
+  border-radius: 20px 0 0 20px;
+}
+
+.LeftPart img {
+  object-fit: cover;
+}
+
+.RightPart {
+  height: calc(100% - 80px);
+  position: relative;
+  padding: 40px;
+  object-fit: contain;
+}
+
+.RightPart h2 a {
+  color: var(--black-text);
+  margin: 0;
+  text-decoration: none;
+}
+
+.Container .RightPart {
+  width: calc(60% - 80px);
+}
+
+.RightPart h2 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.RightPart p {
+  margin: 22px 0 0;
+  font-size: 18px;
+  text-align: justify;
+  color: var(--grey-text);
+}
+
+.TimeRead {
+  color: var(--grey-text);
+  font-size: 18px;
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+}
+
+.Hot {
+  position: absolute;
+  padding: 6px;
+  top: 24px;
+  left: 24px;
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.16);
+  color: var(--black-text);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.Hot img {
+  height: 22px;
+  width: 22px;
+  margin-right: 4px;
+}
+
+@media (max-width: 1600px) {
+  .Container {
+    height: 360px;
+  }
+
+  .Container .LeftPart img {
+    height: 360px;
+  }
+
+  .RightPart h2 {
+    font-size: 22px;
+  }
+
+  .RightPart p {
+    margin: 26px 0 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .Container {
+    margin: 0 0 52px;
+  }
+}
+
+@media (max-width: 1120px) {
+  .Container .LeftPart {
+    width: 50%;
+  }
+
+  .Container .RightPart {
+    width: calc(50% - 80px);
+  }
+}
+
+@media (max-width: 950px) {
+  .Container .RightPart h2 {
+    font-size: 28px;
+  }
+
+  .Container {
+    flex-direction: column;
+    height: 500px;
+    margin: 32px 0 52px;
+  }
+
+  .Container .LeftPart {
+    width: 100%;
+  }
+
+  .Container .LeftPart img {
+    height: 240px;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .Container .RightPart {
+    width: calc(100% - 40px);
+    padding: 20px;
+  }
+
+  .TimeRead {
+    right: 20px;
+    bottom: 20px;
+  }
+}
+
+@media (max-width: 750px) {
+  .Container .RightPart h2 {
+    font-size: 24px;
+  }
+
+  .TimeRead {
+    font-size: 18px;
+  }
+
+  .Container .RightPart p {
+    margin: 16px 0 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .Container .LeftPart img {
+    height: 160px;
+  }
+
+  .Container {
+    height: 100%;
+  }
+
+  .Container p,
+  .TimeRead {
+    display: none;
+  }
+}

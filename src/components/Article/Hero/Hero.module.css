@@ -2,7 +2,7 @@
   display: flex;
   position: relative;
   flex-direction: column;
-  padding: 48px 320px 0;
+  padding: 48px calc((100vw - 900px) / 2) 0;
   height: 480px;
 }
 
@@ -13,114 +13,34 @@
   position: absolute;
 }
 
-.Intro {
-  margin: 80px 0 0 0;
-  display: flex;
-  flex-direction: column;
-}
-
-.Intro h1 {
-  color: var(--white-text);
-  font-weight: 800;
-  font-size: 72px;
-  margin: 0 0 10px;
-}
-
-.Intro h1 img {
-  height: 72px;
-  width: 72px;
-}
-
-.Intro h2 {
-  font-weight: 400;
-  color: var(--white-text);
-  font-size: 30px;
-  line-height: 40px;
-  width: 800px;
-}
-
-.Intro h2 img {
-  height: 30px;
-  width: 30px;
-}
-
-.Intro > h2 > a {
-  font-weight: 700;
-  color: white;
-  text-decoration: none;
-}
-
 @media (max-width: 1200px) {
-  .Intro {
-    top: 50px;
-  }
-
-  .Intro h2 {
-    font-size: 24px;
-  }
-
-  .Intro h2 img {
-    height: 24px;
-    width: 24px;
-  }
-}
-
-@media (max-width: 900px) {
   .Container {
-    height: 600px;
-    position: relative;
-  }
-
-  .Intro {
-    top: 0;
-    margin-left: 50px;
-    padding-right: 30px;
-  }
-
-  .Intro h1 {
-    font-size: 40px;
-  }
-
-  .Intro h2 {
-    font-size: 20px;
-  }
-
-  .Intro h1 img {
-    height: 40px;
-    width: 40px;
-  }
-
-  .Intro h2 img {
-    height: 20px;
-    width: 20px;
+    height: 360px;
   }
 }
 
-@media (max-width: 650px) {
-  .Intro {
-    top: 5%;
-    display: flex;
-    flex-direction: column;
+@media (max-width: 1120px) {
+  .Container {
+    padding: 48px calc((100vw - 720px) / 2) 0;
   }
+}
 
-  .Intro h1 {
-    text-align: center;
-    font-size: 32px;
+@media (max-width: 950px) {
+  .Container {
+    height: 260px;
+    padding: 48px calc((100vw - 540px) / 2) 0;
   }
+}
 
-  .Intro h2 {
-    text-align: center;
-    font-size: 18px;
-    padding-right: 20px;
+@media (max-width: 750px) {
+  .Container {
+    height: 180px;
+    padding: 48px calc((100vw - 420px) / 2) 0;
   }
+}
 
-  .Intro h1 img {
-    height: 32px;
-    width: 32px;
-  }
-
-  .Intro h2 img {
-    height: 18px;
-    width: 18px;
+@media (max-width: 480px) {
+  .Container {
+    padding: 48px calc((100vw - 320px) / 2) 0;
   }
 }

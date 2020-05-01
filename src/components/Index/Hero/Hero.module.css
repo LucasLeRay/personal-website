@@ -3,7 +3,7 @@
   display: flex;
   position: relative;
   flex-direction: column;
-  padding: 48px 320px 0;
+  padding: 48px calc((100vw - 900px) / 2) 0;
   height: 100vh;
 }
 
@@ -48,12 +48,6 @@
   font-weight: 700;
   color: white;
   text-decoration: none;
-}
-
-@media (max-width: 1600px) {
-  .Container {
-    padding: 48px calc((100vw - 900px) / 2) 0;
-  }
 }
 
 @media (max-width: 1200px) {

@@ -1,38 +1,33 @@
 import React from "react"
-import { string, number } from "prop-types"
+import { bool, string, number } from "prop-types"
 import { Link } from "gatsby"
 
 import {
+  HotContainer,
   Container,
   LeftPart,
   RightPart,
   TimeRead,
-} from "./ArticleCard.module.css"
+} from "./SecondaryArticleCard.module.css"
 
-function ArticleCard({ cover, title, body, path, time }) {
+function SecondaryArticleCard({ cover, title, body, path, time }) {
   return (
     <div className={Container}>
       <div className={LeftPart}>
-        <Link to={path}>
-          <img alt={title} src={cover} />
-        </Link>
+        <img src={cover} />
       </div>
       <div className={RightPart}>
         <h2>
           <Link to={path}>{title}</Link>
         </h2>
-        <Link to={path}>
-          <p>{body}</p>
-        </Link>
-        <Link to={path}>
-          <span className={TimeRead}>{`${time} min read`}</span>
-        </Link>
+        <p>{body}</p>
+        <span className={TimeRead}>{`${time} min read`}</span>
       </div>
     </div>
   )
 }
 
-ArticleCard.propTypes = {
+SecondaryArticleCard.propTypes = {
   cover: string.isRequired,
   title: string.isRequired,
   body: string.isRequired,
@@ -40,4 +35,4 @@ ArticleCard.propTypes = {
   path: string.isRequired,
 }
 
-export default ArticleCard
+export default SecondaryArticleCard

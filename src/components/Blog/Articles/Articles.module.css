@@ -15,14 +15,7 @@
 
 .ArticlesWrapper,
 .HotArticleWrapper {
-  width: 1260px;
-}
-
-@media (max-width: 1600px) {
-  .ArticlesWrapper,
-  .HotArticleWrapper {
-    width: 900px;
-  }
+  width: 900px;
 }
 
 @media (max-width: 1200px) {
