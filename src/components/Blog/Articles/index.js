@@ -22,6 +22,7 @@ function Articles({ hotPost, posts }) {
       <div className={ArticlesWrapper}>
         {posts.map(post => (
           <ArticleCard
+            key={post.path}
             path={post.path}
             cover={post.cover}
             title={post.title}

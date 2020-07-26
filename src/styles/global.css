@@ -13,3 +13,9 @@ body {
   --secondary-black-text: #172b4d;
   --primary-color: #e96835;
 }
+
+.twitter-tweet {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center;
+}

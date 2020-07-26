@@ -4,6 +4,8 @@
   flex-direction: column;
   padding: 48px calc((100vw - 900px) / 2) 0;
   height: 480px;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 .WaveWrapper {

@@ -8,6 +8,8 @@ cover: "/articles/how-social-media-make-us-addicted/3.jpg"
 
 People spend 1/7 of their waking time on social media, according to [Datareportal](https://datareportal.com/reports/digital-2019-global-digital-overview). And honestly it’s not a surprise, screens are omnipresent in our lives, it’s the first thing we use when we wake up and the last thing we use before falling asleep, you are looking at one right now. Nowadays, big tech companies hire neuroscientists to design our experience on social media, in order to make us use them as much time as possible.
 
+---
+
 ## How to create habits?
 
 In _Hooked_, Nir Eyal explains the process of what he calls a “Hook”, which is “an experience designed to connect the user’s problem to the company’s solution with enough frequency to form a habit”.
@@ -29,6 +31,8 @@ Then, the **reward**, it’s the reason why the user opened the app in the first
 The hook is complete in the last step: **investment**. When the user contributes to the improvement of the product, the value he will bring to the product will increase drastically. In the case of YouTube, a user may subscribe to some channels so he will see more content he likes and YouTube will know more precisely what is better to show him.
 
 Now, think about it, which successful social media does not use these mechanisms ? (Spoiler: none)
+
+---
 
 ## Use case: Tinder
 
@@ -58,6 +62,8 @@ Finally, every time a user swipes someone, it contributes to have this person sw
 
 All social networks apply the hook model. As an example, the infinite feed is a feature most social networks use to never break the user’s navigation on the app. Any feature in any social network is designed to make users spend as much time as possible on the app.
 
+---
+
 ## What social networks want is your attention
 
 The term **attention economy **refers to the supply and demand of a person’s attention. Most social networks are free for the users, as Facebook says right on their home page: “it’s free and always will be”. But if users don’t pay with money, they pay with their attention. Indeed, advertisers are the true customers of social media, whereas the product is users’ attention. And the more time you spend on social networks, the more ads the social network can show you. As Sean Parker, ex-president of Facebook, [said at an event in Philadelphia](https://www.theguardian.com/technology/2017/nov/09/facebook-sean-parker-vulnerability-brain-psychology), the objective while developing Facebook was “How do we consume as much of your time and conscious attention as possible?”.
@@ -67,6 +73,8 @@ Also, with each action a user does on a social network, it knows more about him 
 ![Cambridge Analytica claimed to have collected up to [5,000 data points on over 220 million Americans]](https://cdn-images-1.medium.com/max/2484/1*z2jkGbNXo5KOf32ay3b5Og.jpeg)
 
 ###### Cambridge Analytica claimed to have collected up to [5,000 data points on over 220 million Americans](https://web.archive.org/web/20160216023554/https://cambridgeanalytica.org/about)
+
+---
 
 ## How bad is it?
 

@@ -7,6 +7,13 @@ module.exports = {
         name: `articles`,
       },
     },
-    `gatsby-transformer-remark`,
+    `gatsby-remark-embed-gist`,
+    `gatsby-plugin-twitter`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [`gatsby-remark-embedder`, `gatsby-remark-embed-gist`],
+      },
+    },
   ],
 }

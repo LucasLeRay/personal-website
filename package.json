@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "lucas-le-ray.com",
   "private": true,
   "description": "A simplified bare-bones starter for Gatsby",
   "version": "0.1.0",
@@ -10,12 +10,17 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "clean": "gatsby clean"
   },
   "dependencies": {
     "@bit/lucasleray.landing-stuff.moving-wave": "^0.0.1",
+    "@mdx-js/mdx": "^1.6.1",
+    "@mdx-js/react": "^1.6.1",
     "gatsby": "^2.21.0",
+    "gatsby-plugin-mdx": "^1.2.6",
+    "gatsby-plugin-twitter": "^2.3.1",
+    "gatsby-remark-embed-gist": "^1.1.9",
+    "gatsby-remark-embedder": "^2.0.1",
     "gatsby-source-filesystem": "^2.3.0",
     "gatsby-transformer-remark": "^2.8.0",
     "react": "^16.12.0",

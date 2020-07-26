@@ -48,13 +48,14 @@
 }
 
 .Content h1 {
-  font-size: 64px;
-  margin: 0;
+  font-size: 52px;
+  line-height: 64px;
+  margin: 0 0 12px;
 }
 
 .Content h2 {
   font-size: 32px;
-  margin: 1.95em 0 -1em 0;
+  margin: 1em 0 -1em 0;
 }
 
 .Content p {
@@ -98,8 +99,23 @@
   margin-top: 1.05em;
 }
 
-.Content hr {
+.ArticleBody li::marker {
   display: none;
+}
+
+.Content hr {
+  font-family: serif;
+  font-weight: 700;
+  font-size: 22px;
+  margin: 42px 0;
+  border: none;
+  color: var(--grey-text);
+  letter-spacing: 1em;
+  text-align: center;
+}
+
+.Content hr:before {
+  content: "...";
 }
 
 .Content a {
@@ -108,6 +124,25 @@
 
 .ArticleBody {
   margin: 64px 0;
+}
+
+.ArticleBody pre {
+  margin-top: 2em;
+  background-color: #f2f2f2;
+  padding: 20px;
+  font-size: 18px;
+  overflow: auto;
+  font-family: "Nunito Sans", sans-serif, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+}
+
+.ArticleBody code {
+  padding: 0 4px;
+  background-color: #f2f2f2;
+  font-family: "Nunito Sans", sans-serif, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
 }
 
 .Share {
@@ -129,6 +164,7 @@
 
   .Content h1 {
     font-size: 48px;
+    line-height: normal;
     margin: 20px 0 8px;
   }
 
@@ -170,8 +206,10 @@
 
   .Content p,
   .Content li {
-    font-size: 18px;
     line-height: 30px;
+  }
+  .ArticleBody pre {
+    font-size: 16px;
   }
 }
 
@@ -216,6 +254,10 @@
   .Content li {
     font-size: 16px;
     line-height: 26px;
+  }
+
+  .ArticleBody pre {
+    font-size: 14px;
   }
 
   .Share {
