@@ -15,7 +15,7 @@ function Hero() {
           Hi, I'm Lucas ! <img src={emojiVictory} alt="hello" />
         </h1>
         <h2>
-          I'm a french web developer and entrepreneur living in California.
+          I'm a french web developer and maker.
           <br />
           You can see my resume by{" "}
           <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">

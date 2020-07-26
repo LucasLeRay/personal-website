@@ -12,7 +12,7 @@ import {
 
 import pictureMe from "./img/me.png";
 import sheltinLogo from "./img/sheltin.png";
-import epitechLogo from "./img/epitech.png";
+import berkeleyLogo from "./img/berkeley.png";
 import transpareLogo from "./img/transpare.png";
 
 function AboutMe() {
@@ -50,14 +50,14 @@ function AboutMe() {
             </a>
             <a
               className={Role}
-              href="https://epitech.eu"
+              href="https://www.berkeley.edu"
               target="_blank"
               rel="noopener noreferrer"
             >
               <div>
-                <img alt="Epitech" src={epitechLogo} />
+                <img alt="UC Berkeley" src={berkeleyLogo} />
               </div>
-              <h3>Student @ Epitech</h3>
+              <h3>Alumni @ UC Berkeley</h3>
             </a>
           </div>
         </div>

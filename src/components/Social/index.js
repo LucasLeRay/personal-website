@@ -40,6 +40,13 @@ function Social() {
       >
         <img src="img/producthunt.png" alt="product hunt" />
       </a>
+      <a
+        target="_blank"
+        href="https://www.indiehackers.com/lucasleray"
+        rel="noopener noreferrer"
+      >
+        <img src="img/indiehacker.png" alt="indie hacker" />
+      </a>
     </div>
   )
 }

@@ -8,7 +8,7 @@ cover: "/articles/aws-comprehend-opinion-analysis/1.jpg"
 
 500 million.
 
-It's the number of tweets posted per day, 50,000 new since you read this article. Most of them are useless advices from me:
+It's the number of tweets posted per day, 50,000 new since you read this article. Most of them are random congratulations from me:
 
 https://twitter.com/Lucas_Le_Ray/status/1246338630672474112
 
@@ -75,7 +75,7 @@ You can get the complete code at this address: [opinion-analyzer](https://github
 node index.js --subject "Donald Trump" --tweets 100
 ```
 
-- Retrieve these tweets (and ignoring retweeted ones)
+- Retrieve these tweets
 - Get the sentiment of each tweets
 - If the sentiment of a tweet is Positive or Negative, stock it into a light JSON database using **low-db**. If the sentiment is Neutral or Mixed ignore it.
 

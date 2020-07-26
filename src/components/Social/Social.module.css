@@ -8,10 +8,10 @@
 }
 
 .Container img {
-  height: 48px;
-  width: 48px;
+  height: 36px;
+  width: 36px;
   cursor: pointer;
-  margin-left: 15px;
+  margin: 0 0 8px 15px;
   transition: all 0.15s ease-in-out;
 }
 
