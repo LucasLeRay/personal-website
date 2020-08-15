@@ -18,8 +18,8 @@ export default function Template({ data }) {
     frontmatter: { title, cover, time, path },
     html,
   } = markdownRemark
-  const twitterLink = `http://twitter.com/intent/tweet?text=Currently%20reading:%20'${title}'%20https://lucas-le-ray.com/${path}`
-  const facebookLink = `http://www.facebook.com/sharer.php?u=https://lucas-le-ray.com/${path}`
+  const twitterLink = `http://twitter.com/intent/tweet?text=Currently%20reading:%20'${title}'%20https://lucas-le-ray.com${path}`
+  const facebookLink = `http://www.facebook.com/sharer.php?u=https://lucas-le-ray.com${path}`
 
   return (
     <div className={Container}>

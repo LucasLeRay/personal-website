@@ -79,7 +79,7 @@ node index.js --subject "Donald Trump" --tweets 100
 - Get the sentiment of each tweets
 - If the sentiment of a tweet is Positive or Negative, stock it into a light JSON database using **low-db**. If the sentiment is Neutral or Mixed ignore it.
 
-With a crontab, I'm launching this script each day to retrieve 100 tweets about _Donald Trump_ and 100 others about _Joe Biden_, the database has the following format:
+With a crontab, I'm launching this script every 6 hours to retrieve 25 tweets about _Donald Trump_ and 25 others about _Joe Biden_, the database has the following format:
 
 ```
 {
@@ -106,7 +106,17 @@ With a crontab, I'm launching this script each day to retrieve 100 tweets about 
 
 ## The Results 📊
 
-After running for a week, here is the results of the program:
+After running for a week, here are the results of **Donald Trump**:
+
+![Donald Trump Popularity](/articles/aws-comprehend-opinion-analysis/2.png)
+
+And here's **Joe Biden**'s:
+
+![Joe Biden Popularity](/articles/aws-comprehend-opinion-analysis/3.png)
+
+As we can see, _Joe Biden_ has significantly more positive tweets (about **362%** more) and less negative ones than _Donald Trump_ (about **38%** less).
+
+One surprising thing is that both _Donald Trump_ and _Joe Biden_ have much more negative tweets than positive ones (**1672%** more for _Donald Trump_ and **287%** more for _Joe Biden_)
 
 ---
 
@@ -118,12 +128,12 @@ Hum, not so sure.
 There are a lot of factors that invalidate the previous results:
 
 - **Not everyone is on Twitter**, "only" [22% of US adults](https://www.omnicoreagency.com/twitter-statistics/)
-- **Only active tweeters are taken into account**, not tweeters who don't tweet.
-- **People have more reaction when they're feeling negative emotions**, so there are more negative tweets than positive ones
-- **The program only runs at one time of the day**, at 11pm when the Boomers are no longer active, which can affect the results
+- **Only active tweeters are taken into account**, not tweeters who don't post.
+- **People have more reaction when they're feeling negative emotions**, that explains why there are so many more negative tweets than positive ones.
+- **The program only runs 4 times a day**, to be really accurate, the program should take into account all new tweets regardless of the hour.
 - **Not enough data**, I would need thousands or even millions of tweets to get convincing results, but I don't really want to spend my scholarship on my [Amazon bill](https://aws.amazon.com/fr/comprehend/pricing/), so we'll stay at 100 per day
 
-And Comprehend doesn't get sarcasm effectively, for example a tweet containing : "_Of course I love Donald Trump! who doesn't love racism?_ " got a score of **89.2%** as a positive feeling.
+Finally, Comprehend doesn't get sarcasm effectively, for example a tweet containing : "_Of course I love Donald Trump! who doesn't love racism?_ " got a score of **89.2%** as a positive feeling.
 
 https://media.giphy.com/media/3o6ZtaWzv2oQNaIbjq/giphy.gif
 
@@ -133,6 +143,6 @@ https://media.giphy.com/media/3o6ZtaWzv2oQNaIbjq/giphy.gif
 
 There are many reasons not to think that these results correspond to reality, which can be verified very easily thanks to [FiveThirtyHeight](https://projects.fivethirtyeight.com/trump-approval-ratings/).
 
-But as we have seen, these reasons are not related to flaws in Comprehend, they are mainly due to the fact that the analysis of Tweets does not allow us to know the popularity of someone, but rather the rate of negativity or positivity it generates, which is very different.
+But as we have seen, most flaws are not related to Comprehend, but are mainly due to the fact that the analysis of Tweets does not allow us to know the popularity of someone, but rather the rate of negativity or positivity it generates, which is very different.
 
 With this program we have only seen a glimpse of what can be achieved with NLP, this area is very exciting and there is a lot to do with it!
