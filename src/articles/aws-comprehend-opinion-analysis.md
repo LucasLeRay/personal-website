@@ -116,7 +116,7 @@ And here's **Joe Biden**'s:
 
 As we can see, _Joe Biden_ has significantly more positive tweets (about **362%** more) and less negative ones than _Donald Trump_ (about **38%** less).
 
-One surprising thing is that both _Donald Trump_ and _Joe Biden_ have much more negative tweets than positive ones (**1672%** more for _Donald Trump_ and **287%** more for _Joe Biden_)
+One surprising thing is that both _Donald Trump_ and _Joe Biden_ have much more negative tweets than positive ones (**1672%** more for _Donald Trump_ and **287%** more for _Joe Biden_).
 
 ---
 
@@ -144,5 +144,7 @@ https://media.giphy.com/media/3o6ZtaWzv2oQNaIbjq/giphy.gif
 There are many reasons not to think that these results correspond to reality, which can be verified very easily thanks to [FiveThirtyHeight](https://projects.fivethirtyeight.com/trump-approval-ratings/).
 
 But as we have seen, most flaws are not related to Comprehend, but are mainly due to the fact that the analysis of Tweets does not allow us to know the popularity of someone, but rather the rate of negativity or positivity it generates, which is very different.
+
+NLP is a very promising domain. [Numerous studies already exist on its use in the field of politics](https://www.ihu.edu.gr/tjortjis/A%20Method%20for%20Predicting%20the%20Winner%20of%20the%20USA%20Presidential%20Elections%20using%20Data%20Extracted%20from%20Twitter%20(3).pdf), but it also finds its use in many other fields. For example, services like [Deepl](https://www.deepl.com) use Deep Learning to translate text efficiently.
 
 With this program we have only seen a glimpse of what can be achieved with NLP, this area is very exciting and there is a lot to do with it!
