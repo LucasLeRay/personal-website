@@ -4,6 +4,7 @@ import Hero from "../components/Blog/Hero"
 import Footer from "../components/Footer"
 import Articles from "../components/Blog/Articles"
 import Social from "../components/Social"
+import SEO from "../components/SEO"
 
 export default ({
   data: {
@@ -23,6 +24,7 @@ export default ({
       <Articles hotPost={posts.shift()} posts={posts} />
       <Footer />
       <Social />
+      <SEO />
     </>
   )
 }

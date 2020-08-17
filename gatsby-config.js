@@ -15,6 +15,7 @@ module.exports = {
     },
     `gatsby-remark-embed-gist`,
     `gatsby-plugin-twitter`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -22,4 +23,10 @@ module.exports = {
       },
     },
   ],
+  siteMetadata: {
+    title: "Lucas Le Ray",
+    description: "Hi ! I'm Lucas, french web developer and entrepreneur.",
+    url: "https://lucas-le-ray.com",
+    twitterUsername: "@Lucas_Le_Ray",
+  },
 }

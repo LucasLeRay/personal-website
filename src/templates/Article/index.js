@@ -11,12 +11,14 @@ import {
 } from "./Article.module.css"
 import Hero from "../../components/Article/Hero"
 import Footer from "../../components/Footer"
+import SEO from "../../components/SEO"
 
 export default function Template({ data }) {
   const { markdownRemark } = data
   const {
     frontmatter: { title, cover, time, path },
     html,
+    abstract,
   } = markdownRemark
   const twitterLink = `http://twitter.com/intent/tweet?text=Currently%20reading:%20'${title}'%20https://lucas-le-ray.com${path}`
   const facebookLink = `http://www.facebook.com/sharer.php?u=https://lucas-le-ray.com${path}`
@@ -54,6 +56,12 @@ export default function Template({ data }) {
         </div>
       </div>
       <Footer />
+      <SEO
+        title={title}
+        description={abstract}
+        image={cover}
+        article
+      />
     </div>
   )
 }
@@ -62,6 +70,7 @@ export const pageQuery = graphql`
   query($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
+      abstract: excerpt(pruneLength: 160)
       frontmatter {
         path
         title

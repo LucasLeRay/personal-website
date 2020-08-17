@@ -6,6 +6,7 @@ import Skills from "../components/Index/Skills"
 import Portfolio from "../components/Index/Portfolio"
 import Footer from "../components/Footer"
 import Social from "../components/Social"
+import SEO from "../components/SEO"
 
 export default () => (
   <>
@@ -15,5 +16,6 @@ export default () => (
     <Portfolio />
     <Footer />
     <Social />
+    <SEO />
   </>
 )
