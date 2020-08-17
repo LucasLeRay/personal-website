@@ -8,11 +8,11 @@ cover: "/articles/aws-comprehend-opinion-analysis/1.jpg"
 
 500 million.
 
-It's the number of tweets posted per day, 50,000 new since you read this article. Most of them are random congratulations from me:
+It's the number of tweets posted per day, 50,000 new since you read this article. I tweet a lot myself:
 
 https://twitter.com/Lucas_Le_Ray/status/1246338630672474112
 
-It's a colossale amount of data, containing the opinions and thoughts of [nearly 50 millions US citizens](https://www.omnicoreagency.com/twitter-statistics/).
+It's a colossal amount of data, containing the opinions and thoughts of [nearly 50 millions US citizens](https://www.omnicoreagency.com/twitter-statistics/).
 
 With the growth of **NLP** (Natural Language Processing) tools such as **AWS Comprehend**, **Google Cloud NLP** or **IBM Watson**, we can analyze people's messages and know their thoughts.
 
