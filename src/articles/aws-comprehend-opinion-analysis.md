@@ -148,3 +148,5 @@ But as we have seen, most flaws are not related to Comprehend, but are mainly du
 NLP is a very promising domain. [Numerous studies already exist on its use in the field of politics](https://www.ihu.edu.gr/tjortjis/A%20Method%20for%20Predicting%20the%20Winner%20of%20the%20USA%20Presidential%20Elections%20using%20Data%20Extracted%20from%20Twitter%20(3).pdf), but it also finds its use in many other fields. For example, services like [Deepl](https://www.deepl.com) use Deep Learning to translate text efficiently.
 
 With this program we have only seen a glimpse of what can be achieved with NLP, this area is very exciting and there is a lot to do with it!
+
+If you have any questions or remarks do not hesitate to [tweet me](http://twitter.com/intent/tweet?text=Hey%20@Lucas_Le_Ray%20What's%20up?)!
