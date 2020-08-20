@@ -22,6 +22,7 @@ export default function Template({ data }) {
   } = markdownRemark
   const twitterLink = `http://twitter.com/intent/tweet?text=Currently%20reading:%20'${title}'%20https://lucas-le-ray.com${path}`
   const facebookLink = `http://www.facebook.com/sharer.php?u=https://lucas-le-ray.com${path}`
+  const linkedinLink = `https://www.linkedin.com/sharing/share-offsite/?url=https://lucas-le-ray.com${path}`
 
   return (
     <div className={Container}>
@@ -37,6 +38,9 @@ export default function Template({ data }) {
             <a href={facebookLink} target="_blank" rel="noopener noreferrer">
               <img alt="facebook" src="/img/facebook.png" />
             </a>
+            <a href={linkedinLink} target="_blank" rel="noopener noreferrer">
+              <img alt="linkedin" src="/img/linkedin.png" />
+            </a>
           </div>
         </div>
         <div
@@ -51,6 +55,9 @@ export default function Template({ data }) {
             </a>
             <a href={facebookLink} target="_blank" rel="noopener noreferrer">
               <img alt="facebook" src="/img/facebook.png" />
+            </a>
+            <a href={linkedinLink} target="_blank" rel="noopener noreferrer">
+              <img alt="linkedin" src="/img/linkedin.png" />
             </a>
           </div>
         </div>
