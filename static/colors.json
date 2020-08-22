@@ -1,0 +1,16 @@
+{
+  "light": {
+    "textPrimary": "#222222",
+    "textSecondary": "#888888",
+    "textTertiary": "#f3f3f3",
+    "background": "#f2f2f2",
+    "primary": "#e96835"
+  },
+  "dark": {
+    "textPrimary": "#ffffff",
+    "textSecondary": "#dddddd",
+    "textTertiary": "#f3f3f3",
+    "background": "#141d26",
+    "primary": "#e96835"
+  }
+}

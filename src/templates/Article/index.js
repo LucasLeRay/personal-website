@@ -12,6 +12,8 @@ import {
 import Hero from "../../components/Article/Hero"
 import Footer from "../../components/Footer"
 import SEO from "../../components/SEO"
+import ColorModeToggle from "../../components/ColorModeToggle"
+import { ThemeProvider } from "../../components/ThemeProvider"
 
 export default function Template({ data }) {
   const { markdownRemark } = data
@@ -25,7 +27,9 @@ export default function Template({ data }) {
   const linkedinLink = `https://www.linkedin.com/sharing/share-offsite/?url=https://lucas-le-ray.com${path}`
 
   return (
+    <ThemeProvider>
     <div className={Container}>
+      <ColorModeToggle />
       <Hero cover={cover} />
       <div className={Content}>
         <h1>{title}</h1>
@@ -70,6 +74,7 @@ export default function Template({ data }) {
         article
       />
     </div>
+    </ThemeProvider>
   )
 }
 

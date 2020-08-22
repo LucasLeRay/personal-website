@@ -1,5 +1,5 @@
 .Container {
-  color: var(--black-text);
+  color: var(--color-text-primary);
 }
 
 .Data {
@@ -9,7 +9,7 @@
 }
 
 .TimeRead {
-  color: var(--grey-text);
+  color: var(--color-text-secondary);
   font-size: 22px;
 }
 
@@ -37,7 +37,7 @@
   width: 100%;
   margin-block-start: 1em;
   margin-block-end: 1em;
-  color: var(--grey-text);
+  color: var(--color-text-secondary);
   font-size: 14px;
 }
 
@@ -69,14 +69,14 @@
 .Content blockquote h1 {
   margin: 2.75em 0 2.25em;
   font-size: 30px;
-  color: var(--grey-text);
+  color: var(--color-text-secondary);
   font-weight: 400;
   font-style: italic;
 }
 
 .Content h6 {
   font-size: 16px;
-  color: var(--grey-text);
+  color: var(--color-text-secondary);
   width: 100%;
   text-align: center;
   font-weight: 400;
@@ -84,7 +84,7 @@
 }
 
 .Content h6 a {
-  color: var(--grey-text);
+  color: var(--color-text-secondary);
   text-decoration: underline;
 }
 
@@ -111,7 +111,7 @@
   font-size: 22px;
   margin: 42px 0;
   border: none;
-  color: var(--grey-text);
+  color: var(--color-text-secondary);
   letter-spacing: 1em;
   text-align: center;
 }
@@ -150,7 +150,7 @@
 .Share {
   font-size: 22px;
   font-weight: 700;
-  color: var(--black-text);
+  color: var(--color-text-primary);
   display: flex;
   align-items: center;
 }
@@ -247,7 +247,7 @@
   .Content blockquote h1 {
     margin: 2.75em 0 2.25em;
     font-size: 22px;
-    color: var(--grey-text);
+    color: var(--color-text-secondary);
     font-weight: 400;
     font-style: italic;
   }

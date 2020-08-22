@@ -46,7 +46,7 @@
 }
 
 .Role h3 {
-  color: var(--black-text);
+  color: var(--color-text-primary);
 }
 
 .RoleList {

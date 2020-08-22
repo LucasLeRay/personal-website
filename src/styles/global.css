@@ -6,16 +6,15 @@ body {
     "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: white;
-  --white-text: #f3f3f3;
-  --black-text: #222222;
-  --grey-text: #888888;
-  --secondary-black-text: #172b4d;
-  --primary-color: #e96835;
+  background-color: var(--color-background);
 }
 
 .twitter-tweet {
   width: 100% !important;
   display: flex !important;
   justify-content: center;
+}
+
+.morph-path {
+  fill: var(--color-background);
 }

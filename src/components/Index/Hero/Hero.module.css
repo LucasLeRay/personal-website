@@ -21,7 +21,7 @@
 }
 
 .Intro h1 {
-  color: var(--white-text);
+  color: var(--color-text-tertiary);
   font-weight: 800;
   font-size: 72px;
   margin: 0 0 10px;
@@ -34,7 +34,7 @@
 
 .Intro h2 {
   font-weight: 400;
-  color: var(--white-text);
+  color: var(--color-text-tertiary);
   font-size: 30px;
   line-height: 40px;
 }
