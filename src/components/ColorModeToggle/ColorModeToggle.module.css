@@ -1,0 +1,45 @@
+.Container {
+  height: 28px;
+}
+
+.Container svg {
+  width: 28px;
+  cursor: pointer;
+  fill: var(--color-text-primary);
+}
+
+.Container svg[toggle='1'] {
+  animation: change ease 1s;
+}
+
+@media (max-width: 800px) {
+  .Container {
+    height: 26px;
+  }
+
+  .Container svg {
+    width: 26px;
+  }
+}
+
+@media (max-width: 600px) {
+  .Container {
+    height: 24px;
+  }
+
+  .Container svg {
+    width: 24px;
+  }
+}
+
+@keyframes change {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.2) rotate(90deg);
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
+}

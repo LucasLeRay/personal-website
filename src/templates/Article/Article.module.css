@@ -19,6 +19,7 @@
   color: var(--color-text-secondary);
   transition: color 0.2s;
   font-size: 22px;
+  margin-left: 12px;
 }
 
 .Social {
