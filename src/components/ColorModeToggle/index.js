@@ -5,7 +5,7 @@ function ColorModeToggle () {
   const { colorMode, setColorMode } = useContext(ThemeContext)
 
   return (
-    <button style={{backgroundColor: 'red'}} onClick={() => setColorMode(colorMode === 'light' ? 'dark' : 'light')}>{colorMode === 'dark' ? '🌙' : '☀️'}</button>
+    <button style={{backgroundColor: 'blue'}} onClick={() => setColorMode(colorMode === 'light' ? 'dark' : 'light')}>{colorMode === 'dark' ? '🌙' : '☀️'}</button>
   )
 }
 
