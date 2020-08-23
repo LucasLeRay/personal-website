@@ -6,7 +6,7 @@
   border-radius: 20px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.16);
   display: flex;
-  background-color: white;
+  background-color: #ffffff;
 }
 
 .Container a {
@@ -38,7 +38,7 @@
 }
 
 .RightPart h2 a {
-  color: var(--color-text-primary);
+  color: #222222;
   margin: 0;
   text-decoration: none;
 }
@@ -56,11 +56,11 @@
   margin: 22px 0 0;
   font-size: 18px;
   text-align: justify;
-  color: var(--color-text-secondary);
+  color: #888888;
 }
 
 .TimeRead {
-  color: var(--color-text-secondary);
+  color: #888888;
   font-size: 18px;
   position: absolute;
   right: 40px;
@@ -76,7 +76,7 @@
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.16);
-  color: var(--color-text-primary);
+  color: #222222;
   font-weight: 700;
   font-size: 18px;
 }

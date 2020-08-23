@@ -1,5 +1,12 @@
 .Container {
+  background-color: var(--color-background);
   color: var(--color-text-primary);
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.Container :global(.moving-wave) path {
+  fill: var(--color-background);
+  transition: fill 0.2s;
 }
 
 .Data {
@@ -10,6 +17,7 @@
 
 .TimeRead {
   color: var(--color-text-secondary);
+  transition: color 0.2s;
   font-size: 22px;
 }
 
@@ -38,6 +46,7 @@
   margin-block-start: 1em;
   margin-block-end: 1em;
   color: var(--color-text-secondary);
+  transition: color 0.2s;
   font-size: 14px;
 }
 
@@ -70,6 +79,7 @@
   margin: 2.75em 0 2.25em;
   font-size: 30px;
   color: var(--color-text-secondary);
+  transition: color 0.2s;
   font-weight: 400;
   font-style: italic;
 }
@@ -77,6 +87,7 @@
 .Content h6 {
   font-size: 16px;
   color: var(--color-text-secondary);
+  transition: color 0.2s;
   width: 100%;
   text-align: center;
   font-weight: 400;
@@ -85,6 +96,7 @@
 
 .Content h6 a {
   color: var(--color-text-secondary);
+  transition: color 0.2s;
   text-decoration: underline;
 }
 
@@ -112,6 +124,7 @@
   margin: 42px 0;
   border: none;
   color: var(--color-text-secondary);
+  transition: color 0.2s;
   letter-spacing: 1em;
   text-align: center;
 }
@@ -121,7 +134,8 @@
 }
 
 .Content a {
-  color: var(--primary-color);
+  font-weight: 700;
+  color: var(--color-primary);
 }
 
 .ArticleBody {
@@ -130,7 +144,9 @@
 
 .ArticleBody pre {
   margin-top: 2em;
-  background-color: #f2f2f2;
+  border-radius: 6px;
+  background-color: var(--color-code-background);
+  transition: background-color 0.2s;
   padding: 20px;
   font-size: 18px;
   overflow: auto;
@@ -141,7 +157,9 @@
 
 .ArticleBody code {
   padding: 0 4px;
-  background-color: #f2f2f2;
+  border-radius: 6px;
+  background-color: var(--color-code-background);
+  transition: background-color 0.2s;
   font-family: "Nunito Sans", sans-serif, -apple-system, BlinkMacSystemFont,
     "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
     "Helvetica Neue", sans-serif;
@@ -151,6 +169,7 @@
   font-size: 22px;
   font-weight: 700;
   color: var(--color-text-primary);
+  transition: color 0.2s;
   display: flex;
   align-items: center;
 }

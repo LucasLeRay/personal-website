@@ -28,7 +28,7 @@
 
 .DescriptionBlock {
   max-width: 450px;
-  color: var(--color-text-primary);
+  color: #222222;
   padding: 0 20px 0 50px;
 }
 
@@ -37,14 +37,14 @@
 }
 
 .LinksWrapper a {
-  color: var(--primary-color);
+  color: #e96835;
   text-decoration: none;
   margin-right: 15px;
   font-weight: bold;
 }
 
 .DescriptionBlock h3 {
-  color: var(--color-text-primary);
+  color: #222222;
   font-size: 28px;
   margin: 0 0 5px;
 }
@@ -61,7 +61,7 @@
 .Text a {
   text-decoration: none;
   font-weight: bold;
-  color: var(--color-text-primary);
+  color: #222222;
 }
 
 @media (min-width: 600px) {

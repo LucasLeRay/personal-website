@@ -8,7 +8,7 @@ export const ThemeProvider = ({ children }) => {
   const [
     colorMode,
     rawSetColorMode
-  ] = useState(undefined);
+  ] = useState('light');
 
   useEffect(() => {
     const root = window.document.documentElement;
@@ -18,10 +18,10 @@ export const ThemeProvider = ({ children }) => {
   }, []);
 
   const setColorMode = (value) => {
-    const root = window.document.documentElement;
     rawSetColorMode(value);
     localStorage.setItem('color-mode', value);
-
+    
+    const root = window.document.documentElement;
     Object.entries(COLORS[value]).forEach(([name, colorByTheme]) => {
       const cssVarName = `--color-${name}`;
       root.style.setProperty(cssVarName, colorByTheme);

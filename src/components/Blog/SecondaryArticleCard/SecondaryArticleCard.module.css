@@ -35,7 +35,7 @@
 }
 
 .RightPart h2 a {
-  color: var(--color-text-primary);
+  color: #e96835;
   margin: 0;
   text-decoration: none;
 }
@@ -52,7 +52,7 @@
 }
 
 .TimeRead {
-  color: var(--color-text-secondary);
+  color: #888888;
   font-size: 18px;
   position: absolute;
   right: 40px;

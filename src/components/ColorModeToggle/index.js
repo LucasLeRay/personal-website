@@ -4,21 +4,8 @@ import { ThemeContext } from '../ThemeProvider'
 function ColorModeToggle () {
   const { colorMode, setColorMode } = useContext(ThemeContext)
 
-  if (!colorMode) {
-    return null;
-  }
-
   return (
-    <label>
-      <input
-        type="checkbox"
-        checked={colorMode === 'dark'}
-        onChange={ev => {
-          setColorMode(ev.target.checked ? 'dark' : 'light');
-        }}
-      />{' '}
-      Dark
-    </label>
+    <button style={{backgroundColor: 'red'}} onClick={() => setColorMode(colorMode === 'light' ? 'dark' : 'light')}>{colorMode === 'dark' ? '🌙' : '☀️'}</button>
   )
 }
 

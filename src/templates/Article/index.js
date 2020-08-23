@@ -29,11 +29,11 @@ export default function Template({ data }) {
   return (
     <ThemeProvider>
     <div className={Container}>
-      <ColorModeToggle />
       <Hero cover={cover} />
       <div className={Content}>
         <h1>{title}</h1>
         <div className={Data}>
+          <ColorModeToggle />
           <span className={TimeRead}>{`${time} min read -`}</span>
           <div className={Social}>
             <a href={twitterLink} target="_blank" rel="noopener noreferrer">

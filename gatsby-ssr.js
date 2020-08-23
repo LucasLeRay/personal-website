@@ -1,12 +1,11 @@
 const React = require('react')
-
 const COLORS = require('./static/colors.json')
 
 function setColorsByTheme () {
   const colors = 'COLORS'
 
   function getInitialColorMode() {
-    const persistedColorPreference = window.localStorage.getItem('color-mode')
+    const persistedColorPreference = localStorage.getItem('color-mode')
     if (typeof persistedColorPreference === 'string') {
       return persistedColorPreference
     }
@@ -18,21 +17,21 @@ function setColorsByTheme () {
   }
 
   const colorMode = getInitialColorMode();
-  const root = document.documentElement;
 
-  Object.entries(colors[value]).forEach(([name, colorByTheme]) => {
+  const root = document.documentElement;
+  Object.entries(colors[colorMode]).forEach(([name, colorByTheme]) => {
     const cssVarName = '--color-' + name;
-    console.log(cssVarName, colorByTheme)
     root.style.setProperty(cssVarName, colorByTheme);
   });
 
   root.style.setProperty('--initial-color-mode', colorMode);
 }
 
+
 const ColorModeInject = () => {
   const functionString = String(setColorsByTheme)
-    .replace("'COLORS'", COLORS);
-  let codeToRun = `(${functionString})()`;
+    .replace("'COLORS'", JSON.stringify(COLORS));
+  const codeToRun = `(${functionString})()`;
 
   return (
     <script

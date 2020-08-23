@@ -1192,10 +1192,10 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@bit/lucasleray.landing-stuff.moving-wave@^0.0.1":
-  version "0.0.1"
-  resolved "https://node.bit.dev/lucasleray.landing-stuff.moving-wave/-/lucasleray.landing-stuff.moving-wave-0.0.1.tgz#a4ad8dda634def373705cc88dab6c39bbcee30e5"
-  integrity sha1-pK2N2mNN7zc3BcyI2rbDm7zuMOU=
+"@bit/lucasleray.landing-stuff.moving-wave@^0.0.2":
+  version "0.0.2"
+  resolved "https://node.bit.dev/lucasleray.landing-stuff.moving-wave/-/lucasleray.landing-stuff.moving-wave-0.0.2.tgz#3675f2e356bdd9d8f3c8f7dbeeac9d0ec9d17a62"
+  integrity sha1-NnXy41a92djzyPfb7qydDsnRemI=
   dependencies:
     animejs "^3.1.0"
     prop-types "15.7.2"
