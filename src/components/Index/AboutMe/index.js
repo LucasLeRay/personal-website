@@ -10,7 +10,6 @@ import {
   Profile
 } from "./AboutMe.module.css";
 
-import pictureMe from "./img/me.png";
 import sheltinLogo from "./img/sheltin.png";
 import berkeleyLogo from "./img/berkeley.png";
 import transpareLogo from "./img/transpare.png";
@@ -22,7 +21,7 @@ function AboutMe() {
         <div className={ContentWrapper}>
           <div className={Profile}>
             <div className={ImageWrapper}>
-              <img alt="Lucas Le Ray" src={pictureMe} />
+              <img alt="Lucas Le Ray" src="/img/me/me.png" />
             </div>
           </div>
           <div className={RoleList}>

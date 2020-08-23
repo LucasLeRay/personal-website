@@ -12,6 +12,7 @@ import {
 import Hero from "../../components/Article/Hero"
 import Footer from "../../components/Footer"
 import SEO from "../../components/SEO"
+import AboutMe from "../../components/Article/AboutMe"
 
 export default function Template({ data }) {
   const { markdownRemark } = data
@@ -27,6 +28,7 @@ export default function Template({ data }) {
   return (
     <div className={Container}>
       <Hero cover={cover} />
+      <AboutMe />
       <div className={Content}>
         <h1>{title}</h1>
         <div className={Data}>

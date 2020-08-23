@@ -1,0 +1,28 @@
+.Container {
+  position: absolute;
+  display: flex;
+  padding: 12px;
+}
+
+.Container img {
+  width: 60px;
+}
+
+.WrittenBy {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.WrittenBy > span:first-child {
+  color:var(--grey-text);
+  font-size: 18px;
+}
+
+.WrittenBy > a:last-child {
+  color: var(--black-text);
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 20px;
+}
