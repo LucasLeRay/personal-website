@@ -108,11 +108,11 @@ With a crontab, I'm launching this script every 6 hours to retrieve 25 tweets ab
 
 After running for a week, here are the results of **Donald Trump**:
 
-![Donald Trump Popularity](/articles/aws-comprehend-opinion-analysis/2.png)
+![Donald Trump Popularity](/articles/aws-comprehend-opinion-analysis/2.jpg)
 
 And here's **Joe Biden**'s:
 
-![Joe Biden Popularity](/articles/aws-comprehend-opinion-analysis/3.png)
+![Joe Biden Popularity](/articles/aws-comprehend-opinion-analysis/3.jpg)
 
 As we can see, _Joe Biden_ has significantly more positive tweets (about **362%** more) and less negative ones than _Donald Trump_ (about **38%** less).
 

@@ -1,0 +1,62 @@
+.Container {
+  height: 28px;
+}
+
+.Container svg {
+  width: 28px;
+  cursor: pointer;
+  fill: var(--color-text-primary);
+}
+
+.Container svg[toggle='OUT'] {
+  animation: out ease .8s;
+}
+
+.Container svg[toggle='IN'] {
+  animation: in ease .8s;
+}
+
+@media (max-width: 800px) {
+  .Container {
+    height: 26px;
+  }
+
+  .Container svg {
+    width: 26px;
+  }
+}
+
+@media (max-width: 600px) {
+  .Container {
+    height: 24px;
+  }
+
+  .Container svg {
+    width: 24px;
+  }
+}
+
+@keyframes out {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.2) rotate(90deg);
+  }
+  100% {
+    transform: scale(0) rotate(360deg);
+  }
+}
+
+@keyframes in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
