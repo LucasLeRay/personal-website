@@ -7,7 +7,7 @@ import Sun from './sun.svg'
 
 function ColorModeToggle () {
   const { colorMode, setColorMode } = useContext(ThemeContext)
-  const [ toggle, setToggle ] = useState('IDDLE')
+  const [ toggle, setToggle ] = useState(null)
 
   return (
     <div className={Container}>
