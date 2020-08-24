@@ -8,8 +8,12 @@
   fill: var(--color-text-primary);
 }
 
-.Container svg[toggle='1'] {
-  animation: change ease 1s;
+.Container svg[toggle='OUT'] {
+  animation: out ease .8s;
+}
+
+.Container svg[toggle='IN'] {
+  animation: in ease .8s;
 }
 
 @media (max-width: 800px) {
@@ -32,7 +36,7 @@
   }
 }
 
-@keyframes change {
+@keyframes out {
   0% {
     transform: scale(1) rotate(0deg);
   }
@@ -40,6 +44,19 @@
     transform: scale(1.2) rotate(90deg);
   }
   100% {
-    transform: scale(1) rotate(360deg);
+    transform: scale(0) rotate(360deg);
   }
 }
+
+@keyframes in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
