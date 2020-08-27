@@ -1,0 +1,62 @@
+.Container {
+  position: relative;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: 1px solid transparent;
+}
+
+.Container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Container span {
+  margin-top: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(224, 36, 94);
+}
+
+.Icon {
+  height: 50px;
+  fill: rgb(224, 36, 94);
+  transition: all 0.3s;
+}
+
+.Icon:hover {
+  filter: drop-shadow(0 0 20px rgb(224, 36, 94));
+  animation: hover 1s infinite;
+}
+
+.Container[animate="1"] .Icon {
+  animation: clicked 0.3s ease-in;
+}
+
+@keyframes hover {
+  0% {
+    transform: rotate(0deg);
+  }
+  33% {
+    transform: rotate(10deg);
+  }
+  66% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes clicked {
+  0% {
+    transform: scale(0.2);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
