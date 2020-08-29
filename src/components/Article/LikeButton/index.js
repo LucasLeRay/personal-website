@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react'
 import { string, number, func } from 'prop-types'
 
 import { Container, Icon } from './LikeButton.module.css'
-import { ReactComponent as Heart } from './heart.svg'
-import { ReactComponent as FilledHeart } from './filledHeart.svg'
+import Heart from './heart.svg'
+import FilledHeart from './filledHeart.svg'
 
-function LikeButton({ clickId, limit, count, onClick, ...props }) {
+function LikeButton({ clickId, limit, count, onClick, className, ...props }) {
   const [clicked, setClicked] = useState(Number(localStorage.getItem(clickId)) || 0)
   const [animate, setAnimate] = useState(0)
 
@@ -21,7 +21,7 @@ function LikeButton({ clickId, limit, count, onClick, ...props }) {
       setAnimate(1)
       onClick(clicked)
     }}
-    className={Container}
+    className={`${Container} ${className}`}
     {...props}
     >
       {clicked ? <FilledHeart className={Icon} /> : <Heart className={Icon} />}
@@ -34,13 +34,15 @@ LikeButton.propTypes = {
   limit: number,
   count: number,
   onClick: func,
+  className: string,
 }
 
 LikeButton.defaultProps = {
   clickId: 'like',
   limit: Infinity,
   count: 0,
-  onClick: () => {}
+  onClick: () => {},
+  className: '',
 }
 
 export default LikeButton
