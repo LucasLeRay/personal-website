@@ -6,10 +6,11 @@ import Heart from './heart.svg'
 import FilledHeart from './filledHeart.svg'
 
 function LikeButton({ clickId, limit, count, onClick, className, ...props }) {
-  const [clicked, setClicked] = useState(Number(localStorage.getItem(clickId)) || 0)
+  const [clicked, setClicked] = useState(0)
   const [animate, setAnimate] = useState(0)
 
   useEffect(() => {
+    setClicked(Number(localStorage.getItem(clickId)) || 0)
     return localStorage.setItem(clickId, clicked)
   }, [clickId, clicked])
 
