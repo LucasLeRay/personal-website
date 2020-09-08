@@ -5,45 +5,94 @@ import { Container, Icon } from './LikeButton.module.css'
 import Heart from './heart.svg'
 import FilledHeart from './filledHeart.svg'
 
-function LikeButton({ clickId, limit, count, onClick, className, ...props }) {
-  const [clicked, setClicked] = useState(0)
+function LikeButton({
+  clickId,
+  limit,
+  onClick,
+  className,
+  id,
+  ...props
+}) {
+  const [userLikes, setUserLikes] = useState(0)
   const [animate, setAnimate] = useState(0)
+  const [count, setCount] = useState(0)
+  const [userId, setUserId] = useState('')
 
   useEffect(() => {
-    setClicked(Number(localStorage.getItem(clickId)) || 0)
-    return localStorage.setItem(clickId, clicked)
-  }, [clickId, clicked])
+    async function getLikes() {
+      const url = `/.netlify/functions/get-likes?id=${id}&userId=${userId}`
+      const res = await fetch(url)
+      const data = await res.json()
+      setCount(data.total - data.fromUser)
+      setUserLikes(data.fromUser)
+    }
+
+    if (id && userId) {
+      getLikes()
+    }
+  }, [id, userId])
+
+  useEffect(() => {
+    const userStorage = localStorage.getItem('userId')
+    if (userStorage) {
+      setUserId(userStorage)
+    } else {
+      const id = Math.random().toString(36).substr(2, 9)
+      localStorage.setItem('userId', id)
+      setUserId(id)
+    }
+  }, [])
+
+  async function sendLike(value) {
+    const res = await fetch('/.netlify/functions/post-likes',
+      {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ id, userId, count: value }),
+      }
+    )
+    if (res.status !== 200) setUserLikes(userLikes)
+  }
 
   return (<button
     animate={animate}
     onAnimationEnd={() => setAnimate(0)}
     onClick={() => {
-      if (clicked < limit && animate === 0) setClicked(clicked + 1)
-      setAnimate(1)
-      onClick(clicked)
+      if (userLikes < limit && animate === 0) {
+        setAnimate(1)
+        setUserLikes(userLikes + 1)
+        sendLike(userLikes + 1)
+      }
+      onClick(userLikes)
     }}
     className={`${Container} ${className}`}
     {...props}
     >
-      {clicked ? <FilledHeart className={Icon} /> : <Heart className={Icon} />}
-      <span>{count + clicked}</span>
+      {userLikes
+        ? <FilledHeart className={Icon} />
+        : <Heart className={Icon} />
+      }
+      <span>{count + userLikes}</span>
   </button>)
 }
 
 LikeButton.propTypes = {
   clickId: string,
   limit: number,
-  count: number,
   onClick: func,
   className: string,
+  id: string,
 }
 
 LikeButton.defaultProps = {
   clickId: 'like',
   limit: Infinity,
-  count: 0,
   onClick: () => {},
   className: '',
+  id: '',
 }
 
 export default LikeButton

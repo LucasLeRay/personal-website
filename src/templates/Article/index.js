@@ -37,7 +37,7 @@ export default function Template({ data }) {
         <div className={SideBar}>
           <div className={SideBarContent}>
             <ColorModeToggle />
-            <LikeButton />
+            <LikeButton limit={30} id={path.replace('/blog/', '')} />
           </div>
         </div>
         <h1>{title}</h1>
