@@ -1,7 +1,7 @@
 const faunadb = require('faunadb')
 const q = faunadb.query
 
-const dbClient = new faunadb.Client({ secret: process.env.FAUNA_DB_SECRET });
+const dbClient = new faunadb.Client({ secret: process.env.FAUNA_SECRET });
 const limit = process.env.LIKE_LIMIT
 
 exports.handler = async function ({ queryStringParameters }) {
