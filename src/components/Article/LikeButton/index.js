@@ -15,7 +15,7 @@ function LikeButton({
 }) {
   const [userLikes, setUserLikes] = useState(0)
   const [animate, setAnimate] = useState(0)
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(NaN)
   const [userId, setUserId] = useState('')
 
   useEffect(() => {
@@ -57,7 +57,7 @@ function LikeButton({
     if (res.status !== 200) setUserLikes(userLikes)
   }
 
-  return (<button
+  return !isNaN(count) && (<button
     animate={animate}
     onAnimationEnd={() => setAnimate(0)}
     onClick={() => {
@@ -65,6 +65,9 @@ function LikeButton({
         setAnimate(1)
         setUserLikes(userLikes + 1)
         sendLike(userLikes + 1)
+      }
+      if (userLikes >= limit) {
+        setAnimate(2)
       }
       onClick(userLikes)
     }}
