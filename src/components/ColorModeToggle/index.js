@@ -11,7 +11,7 @@ function ColorModeToggle () {
 
   return (
     <div className={Container}>
-      {colorMode === 'dark' && (<Moon
+      {colorMode === 'dark' ? (<Moon
         onClick={() => {
           setToggle('OUT')
         }}
@@ -24,8 +24,7 @@ function ColorModeToggle () {
           }
         }}
         toggle={toggle}
-      />)}
-      {colorMode === 'light' && (<Sun
+      />) : (<Sun
         onClick={() => {
           setToggle('OUT')
         }}
