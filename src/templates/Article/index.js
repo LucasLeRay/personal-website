@@ -2,6 +2,8 @@ import React from "react"
 import { graphql } from "gatsby"
 import {
   Container,
+  SideBar,
+  SideBarContent,
   Content,
   Data,
   TimeRead,
@@ -14,6 +16,7 @@ import Footer from "../../components/Footer"
 import SEO from "../../components/SEO"
 import ColorModeToggle from "../../components/ColorModeToggle"
 import { ThemeProvider } from "../../components/ThemeProvider"
+import LikeButton from "../../components/Article/LikeButton"
 
 export default function Template({ data }) {
   const { markdownRemark } = data
@@ -31,9 +34,14 @@ export default function Template({ data }) {
     <div className={Container}>
       <Hero cover={cover} />
       <div className={Content}>
+        <div className={SideBar}>
+          <div className={SideBarContent}>
+            <ColorModeToggle />
+            <LikeButton limit={30} id={path.replace('/blog/', '')} />
+          </div>
+        </div>
         <h1>{title}</h1>
         <div className={Data}>
-          <ColorModeToggle />
           <span className={TimeRead}>{`${time} min read -`}</span>
           <div className={Social}>
             <a href={twitterLink} target="_blank" rel="noopener noreferrer">

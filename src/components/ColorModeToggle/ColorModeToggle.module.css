@@ -1,11 +1,17 @@
 .Container {
-  height: 28px;
+  height: 40px;
 }
 
 .Container svg {
-  width: 28px;
+  width: 40px;
   cursor: pointer;
   fill: var(--color-text-primary);
+  transition: all 0.3s;
+}
+
+.Container svg:hover {
+  filter: drop-shadow(0 0 20px var(--color-text-primary));
+  animation: hover 1s infinite;
 }
 
 .Container svg[toggle='OUT'] {
@@ -33,6 +39,21 @@
 
   .Container svg {
     width: 24px;
+  }
+}
+
+@keyframes hover {
+  0% {
+    transform: rotate(0deg);
+  }
+  33% {
+    transform: rotate(10deg);
+  }
+  66% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
 
