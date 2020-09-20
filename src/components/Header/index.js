@@ -7,7 +7,7 @@ function Header() {
     <div className={Container}>
       <Link to="/">Home</Link>
       <Link to="/blog">Blog</Link>
-      <a href="mailto:contact@lucas-le-ray.com" rel="noopener noreferrer">
+      <a href="mailto:lucas.a.leray@gmail.com" rel="noopener noreferrer">
         Contact
       </a>
     </div>
