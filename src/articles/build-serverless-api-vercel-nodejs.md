@@ -70,7 +70,7 @@ Here's the response you should have:
 ```
 Vercel CLI 20.1.1
 🔍  Inspect: DETAILS-URL [3s]
-✅  Production: YOUR-PRODUCTION-URL [copied to clipboard] [14s]
+✅  Production: https://YOUR-PRODUCTION-URL [copied to clipboard] [14s]
 ```
 
 And voilà !  
