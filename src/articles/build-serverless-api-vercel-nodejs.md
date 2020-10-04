@@ -96,7 +96,7 @@ Here are some advantages of our fresh new Serverless API:
 ## Serverless Drawbacks 🤔
 As we saw, Serverless is awesome, but it’s not perfect, though. Here’s some common critics about it:
 - **[Cold Start](https://dashbird.io/blog/can-we-solve-serverless-cold-starts/)**: Your API may be a bit slower than a regular server. It's because your Serverless function needs to warm up when it’s called, whereas your server is always up.
-- **[Loss of Control](https://www.oreilly.com/library/view/what-is-serverless/9781491984178/ch04.html#idm140542862552224)**: The Cloud Provider operates Your API and not by yourself. So, you depend on them for the reliability of your API.
+- **[Loss of Control](https://www.oreilly.com/library/view/what-is-serverless/9781491984178/ch04.html#idm140542862552224)**: The _Cloud Provider_ operates Your API and not by yourself. So, you depend on them for the reliability of your API.
 - **[Difficult Monitoring](https://www.serverless.com/blog/serverless-monitoring-the-good-the-bad-and-the-ugly)**: In general, Serverless apps are harder to test and monitor. It can be a problem when you need to have critical insight about your functions.
 
 The great thing is that Serverless community is working to make it even better! Weaknesses are becoming less common and Serverless can be used on a growing number of problems.
