@@ -4,8 +4,18 @@
     "text-secondary": "#888888",
     "text-tertiary": "#f3f3f3",
     "background": "#ffffff",
-    "code-background": "#f2f2f2",
-    "primary": "#e96835"
+    "code-background": "#f5f6f9",
+    "code-highlight": "#eee0ed",
+    "code-punctuation": "#999999",
+    "code-comment": "#8ea1ae",
+    "code-inline": "#298AE6",
+    "code-property": "#298AE6",
+    "code-selector": "#b88eea",
+    "code-operator": "#f63f6a",
+    "code-variable": "#b88eea",
+    "code-function": "#f63f6a",
+    "code-keyword": "#298AE6",
+    "primary": "#f63f6a"
   },
   "dark": {
     "text-primary": "#ffffff",
@@ -13,6 +23,16 @@
     "text-tertiary": "#f3f3f3",
     "background": "#0e131b",
     "code-background": "#161F28",
+    "code-highlight": "#404c58",
+    "code-punctuation": "#bbbbbb",
+    "code-comment": "#73889f",
+    "code-inline": "#27f5bb",
+    "code-property": "#f63f6a",
+    "code-selector": "#27f5bb",
+    "code-operator": "#f63f6a",
+    "code-variable": "#27f5bb",
+    "code-function": "#2ed2ff",
+    "code-keyword": "#f63f6a",
     "primary": "#f63f6a"
   }
 }

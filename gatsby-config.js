@@ -22,7 +22,20 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        plugins: [`gatsby-remark-embedder`, `gatsby-remark-embed-gist`],
+        plugins: [
+          `gatsby-remark-embedder`,
+          `gatsby-remark-embed-gist`, {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: "language-",
+              inlineCodeMarker: '>',
+              aliases: {},
+              showLineNumbers: false,
+              noInlineHighlight: false,
+              escapeEntities: {},
+            },
+          }
+        ],
       },
     },
   ],

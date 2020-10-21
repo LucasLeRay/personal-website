@@ -68,11 +68,31 @@ The code in `index.js` has two parts:
 
 Bot configuration is done with the following:  
 
-`gist:LucasLeRay/c51bbb3f911cf7eec633d0ab09998b5e`
+```javascript
+const { App } = require("@slack/bolt");
+require("dotenv").config(); // Get the API keys from .env file
+
+const app = new App({
+  signingSecret: process.env.SLACK_SIGNING_SECRET,
+  token: process.env.SLACK_BOT_TOKEN
+}); // Configure the Slack App from our API keys
+
+(async () => {
+  await app.start(process.env.PORT || 3000); // Launch the bot
+  console.log("⚡️ Bolt app is running!");
+})();
+```
 
 The following code will listen to **messages** containing ”*Am I rich yet?*” and respond in the same channel with the total amount of dollars in the Stripe Balance:  
 
-`gist:LucasLeRay/fc11bd82da8a9465271221d1898a74a3`
+```javascript
+const stripe = require("stripe")(process.env.STRIPE_SECRET);
+
+app.message("Am I rich yet?", async ({ message, say }) => {
+  const { available } = await stripe.balance.retrieve();
+  say(`Here's your 💸\n${available[0].amount.toFixed(2)}`);
+});
+```
 
 If we try our bot now it’ll not work: We didn’t say to Slack which events we want to listen !
 We can do it in the **Event Subscriptions** section:
