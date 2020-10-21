@@ -8,13 +8,13 @@
     "code-highlight": "#eee0ed",
     "code-punctuation": "#999999",
     "code-comment": "#8ea1ae",
-    "code-inline": "#298AE6",
-    "code-property": "#298AE6",
+    "code-inline": "#298ae6",
+    "code-property": "#298ae6",
     "code-selector": "#b88eea",
     "code-operator": "#f63f6a",
     "code-variable": "#b88eea",
     "code-function": "#f63f6a",
-    "code-keyword": "#298AE6",
+    "code-keyword": "#298ae6",
     "primary": "#f63f6a"
   },
   "dark": {
