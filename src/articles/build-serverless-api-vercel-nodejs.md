@@ -33,18 +33,40 @@ Again, all this in seconds, without paying anything.
 ## Building the API 🛠
 
 Enter this command to setup the project:
-```
+```bash
 yarn init
 ```
 
 Then install  `genius-lyrics` :
-```
+```bash
 yarn add genius-lyrics
 ```
 
 Now, write this code in `api/index.js`:
 
-`gist:LucasLeRay/e6d13dfb149c5a0598cd575c971361b1`
+```javascript
+const Genius = require("genius-lyrics") // import the library
+const Client = new Genius.Client() // setup the Genius Lyrics API
+
+async function retrieveLyrics() {
+  const songs = await Client.songs.search("Pop Smoke") // Get songs from Pop Smoke
+
+  const indexSongs = Math.floor(Math.random() * Math.floor(songs.length))
+  const lyrics = await songs[indexSongs].lyrics() // Get random song
+
+  const arrLyrics = lyrics.split("\n").filter(l => l.length && l[0] !== '[')
+  const indexLyrics = Math.floor(Math.random() * Math.floor(arrLyrics.length))
+  return arrLyrics[indexLyrics] // Return random lyrics
+}
+
+module.exports = async (req, res) => { // this function will be launched when the API is called.
+  try {
+    res.send(await retrieveLyrics()) // send the lyrics
+  } catch (err) {
+    res.send(err) // send the thrown error
+  }
+}
+```
 
 As you can see, no need to add an API key to make [genius-lyrics](https://genius-lyrics.zyrouge.gq) work. But adding a Genius API key will unlock some cool features! You can see a more complete code [here](https://github.com/LucasLeRay/serverless-vercel).
 
@@ -54,12 +76,12 @@ As you can see, no need to add an API key to make [genius-lyrics](https://genius
 The most interesting part, and yet the easiest one.  
 
 To deploy on Vercel, install [Vercel CLI](https://vercel.com/docs/cli) first:
-```
+```bash
 yarn global vercel
 ```
 
 Then, deploy with the following command in the root of your project:
-```
+```bash
 vercel --prod
 ```
 
@@ -77,7 +99,7 @@ And voilà !
 Go to `https://YOUR-PRODUCTION-URL/api` to see it live!  
 You can take a look at my live version [here](https://serverless-vercel-eta.vercel.app/api).
 
-```
+```json
 {
   "status": 200,
   "lyrics": "Oh, oh, oh, oh"

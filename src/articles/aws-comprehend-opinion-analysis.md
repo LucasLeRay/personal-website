@@ -33,7 +33,25 @@ We will proceed in several stages:
 To get tweets to analyze, we are going to use the **Twitter API**.  
 To use Twitter API, we will need to sign up and register an app to get API keys: [Twitter developers console](https://developer.twitter.com). Now we can use the **Twit** library to retrieve Tweets:
 
-`gist:LucasLeRay/dd210f93f282b1711ec07f9d2dbedf15`
+```javascript
+const Twit = require("twit"); // import Twit library
+
+const T = new Twit({
+  consumer_key: "YOUR API CONSUMER KEY",
+  consumer_secret: "YOUR API SECRETCONSUMER KEY",
+  access_token: "YOUR API ACCESS TOKEN",
+  access_token_secret: "YOUR API SECRET ACCESS TOKEN",
+}); // setup Twit
+
+T.get(
+  "search/tweets", // retrieving tweets
+  {
+    q: "Donald Trump", // Get tweets containing "Donald Trump"
+    count: 10, // Get the last 10 tweets
+  },
+  (err, { statuses }) => console.log(statuses) // our tweets! 🎉🎉🎉
+);
+```
 
 `statuses` now contains the last 100 tweets containing "_Donald Trump_" with a lot of information, including the tweets contents in the `text` attribute:
 
@@ -45,11 +63,28 @@ Now that we have data to analyse, let's use **AWS Comprehend** to get the sentim
 To use Comprehend, we will need to sign up and setup **AWS CLI** to use this library: [AWS console](https://aws.amazon.com).  
 Now we can use Comprehend from the **AWS SDK**:
 
-`gist:LucasLeRay/db20c56e2fd9d0d8c59c0fb0524bf03a`
+```javascript
+const AWS = require("aws-sdk"); // import AWS SDK
+
+const comprehend = new AWS.Comprehend({
+  apiVersion: "2017-11-27",
+  region: "eu-west-1",
+}); // setup Comprehend
+
+comprehend.detectSentiment(
+  {
+    Text: "I love apples", // The text to analyze
+    LanguageCode: "en", // The language of the text
+  },
+  function (err, data) {
+    console.log(data); // the sentiments of the author! 🎉🎉🎉
+  }
+);
+```
 
 In `data` we now have the following object:
 
-```
+```json
 {
   "Sentiment": "POSITIVE",  // The most present emotion
   "SentimentScore": {  // The score in each of the emotions
@@ -71,7 +106,7 @@ You can get the complete code at this address: [opinion-analyzer](https://github
 
 - Let the user enter the subject and the number of tweets to retrieve:
 
-```
+```bash
 node index.js --subject "Donald Trump" --tweets 100
 ```
 
@@ -81,7 +116,7 @@ node index.js --subject "Donald Trump" --tweets 100
 
 With a crontab, I'm launching this script every 6 hours to retrieve 25 tweets about _Donald Trump_ and 25 others about _Joe Biden_, the database has the following format:
 
-```
+```json
 {
   "Donald Trump": {  // The subject
     "sinceId": 1257563324088123400  // The last tweet retrieved
