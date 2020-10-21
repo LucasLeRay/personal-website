@@ -8,14 +8,14 @@
     "code-highlight": "#eee0ed",
     "code-punctuation": "#999999",
     "code-comment": "#8ea1ae",
-    "code-inline": "#29bde6",
-    "code-property": "#29bde6",
+    "code-inline": "#298AE6",
+    "code-property": "#298AE6",
     "code-selector": "#b88eea",
     "code-operator": "#f63f6a",
     "code-variable": "#b88eea",
     "code-function": "#f63f6a",
-    "code-keyword": "#29bde6",
-    "primary": "#e96835"
+    "code-keyword": "#298AE6",
+    "primary": "#f63f6a"
   },
   "dark": {
     "text-primary": "#ffffff",
