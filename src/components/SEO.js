@@ -60,7 +60,7 @@ SEO.propTypes = {
 SEO.defaultProps = {
   title: null,
   description: null,
-  image: '/img/preview.png',
+  image: null,
   article: false,
 }
 

@@ -93,6 +93,9 @@ body pre[class*="language-"] {
   color: var(--color-code-operator);
   background: var(--color-code-background);
 }
+.token.operator {
+  transition: background-color 0.2s;
+}
 .token.atrule,
 .token.attr-value,
 .token.keyword {
