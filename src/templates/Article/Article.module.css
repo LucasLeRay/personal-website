@@ -131,7 +131,7 @@
 }
 
 .Content li:not(first-child) {
-  margin-top: 1.05em;
+  margin-top: .8em;
 }
 
 .ArticleBody li::marker {
