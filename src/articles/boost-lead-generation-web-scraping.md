@@ -34,7 +34,7 @@ Let’s say you want data from Y Combinator's top 100 companies, you can get it 
 But there’s a few problems:
 - **It’s long**: You have to click on each site to get your data.
 - **It’s incomplete**: You don’t even have emails ! You have to get them yourself, which can make the process even longer.
-- **It’s not automated**: If new companies come in the top 100, your data becomes obsolete.  
+- **It’s not automated**: If new companies come in the top 100, your data becomes deprecated.  
 - **It's not scalable**: the more data you need, the more time you spend.
 
 By using a **Web Scraper**, you can get this data fast and automatically !  
@@ -83,6 +83,8 @@ If you have basic programming skills, you may want to build a Web Scraper yourse
 - The workflow is highly customizable (because you code it yourself).
 - You can browse through the most complex websites.
 - It's free.
+
+Keep in mind that more and more websites are protected against Web Scraping. So developing one yourself makes it possible to bypass most security measures.
 
 ---
 
