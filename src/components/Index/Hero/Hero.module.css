@@ -4,7 +4,7 @@
   position: relative;
   flex-direction: column;
   padding: 48px calc((100vw - 900px) / 2) 0;
-  height: 100vh;
+  height: 800px;
 }
 
 .WaveWrapper {
@@ -51,6 +51,10 @@
 }
 
 @media (max-width: 1200px) {
+  .Container {
+    height: 720px;
+  }
+
   .Intro {
     margin: 60px 0 0 0;
   }
@@ -121,5 +125,11 @@
   .Intro h2 img {
     height: 18px;
     width: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Container {
+    height: 480px;
   }
 }

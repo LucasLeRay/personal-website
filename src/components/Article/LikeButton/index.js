@@ -43,8 +43,8 @@ function LikeButton({
     }
   }, [])
 
-  async function sendLike(value) {
-    const res = await fetch('/.netlify/functions/post-likes',
+  function sendLike(value) {
+    return fetch('/.netlify/functions/post-likes',
       {
         method: 'POST',
         headers: {
@@ -54,7 +54,6 @@ function LikeButton({
         body: JSON.stringify({ id, userId, count: value }),
       }
     )
-    if (res.status !== 200) setUserLikes(userLikes)
   }
 
   return !isNaN(count) && (<button

@@ -1,16 +1,14 @@
 .Container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
   cursor: pointer;
   background: none;
   border: none;
   outline: 1px solid transparent;
   animation: appear .3s ease-in;
-}
-
-.Container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 0;
 }
 
 .Container span {
