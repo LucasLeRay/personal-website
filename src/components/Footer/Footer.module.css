@@ -1,5 +1,5 @@
 .Container {
-  background: linear-gradient(to left top, #f7830c, #c52068);
+  background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
   position: relative;
   padding: 40px;
   color: white;

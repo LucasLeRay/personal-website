@@ -38,7 +38,7 @@
 }
 
 .RightPart h2 a {
-  color: #222222;
+  color: #0e131b;
   margin: 0;
   text-decoration: none;
 }
@@ -56,11 +56,11 @@
   margin: 22px 0 0;
   font-size: 18px;
   text-align: justify;
-  color: #888888;
+  color: #73889f;
 }
 
 .TimeRead {
-  color: #888888;
+  color: #73889f;
   font-size: 18px;
   position: absolute;
   right: 40px;
@@ -76,7 +76,7 @@
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.16);
-  color: #222222;
+  color: #0e131b;
   font-weight: 700;
   font-size: 18px;
 }

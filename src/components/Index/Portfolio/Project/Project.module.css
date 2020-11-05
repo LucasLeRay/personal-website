@@ -28,7 +28,7 @@
 
 .DescriptionBlock {
   max-width: 450px;
-  color: #222222;
+  color: #0e131b;
   padding: 0 20px 0 50px;
 }
 
@@ -44,7 +44,7 @@
 }
 
 .DescriptionBlock h3 {
-  color: #222222;
+  color: #0e131b;
   font-size: 28px;
   margin: 0 0 5px;
 }
@@ -61,7 +61,7 @@
 .Text a {
   text-decoration: none;
   font-weight: bold;
-  color: #222222;
+  color: #0e131b;
 }
 
 @media (min-width: 600px) {

@@ -1,5 +1,5 @@
 .Container {
-  background: linear-gradient(to left top, #f7830c, #c52068);
+  background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
   display: flex;
   position: relative;
   flex-direction: column;
@@ -21,7 +21,7 @@
 }
 
 .Intro h1 {
-  color: #f3f3f3;
+  color: #fff;
   font-weight: 800;
   font-size: 72px;
   margin: 0 0 10px;
@@ -34,7 +34,7 @@
 
 .Intro h2 {
   font-weight: 400;
-  color: #f3f3f3;
+  color: #fff;
   font-size: 30px;
   line-height: 40px;
   width: 800px;

@@ -19,7 +19,7 @@ body {
 
 body pre[class*="language-"],
 body code[class*="language-"] {
-  color: var(--text-primary);
+  color: var(--color-text-primary);
   text-shadow: none;
   font-family: 'Fira Mono', monospace;
   direction: ltr;
