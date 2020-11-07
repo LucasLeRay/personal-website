@@ -49,7 +49,7 @@ exports.onRenderBody = ({ setPreBodyComponents, setPostBodyComponents }) => {
       data-id="lucasleray"
       data-description="Support me on Buy me a coffee!"
       data-message="Thank you for visiting. You can now buy me a coffee!"
-      data-color="#e96835"
+      data-color="#eb3349"
       data-position="right"
       data-x_margin="18"
       data-y_margin="18"

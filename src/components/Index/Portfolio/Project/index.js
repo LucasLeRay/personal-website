@@ -7,15 +7,16 @@ import {
   ImageBlock,
   Date,
   LinksWrapper,
-  Text
+  Text,
 } from "./Project.module.css";
 
 const classNames = array => array.filter(Boolean).join(" ");
 
-function Project({ title, date, image, children, reverse, links }) {
+function Project({ title, blob, date, image, children, reverse, links }) {
   return (
     <div className={classNames([Container, reverse ? Reverse : ""])}>
       <div className={ImageBlock}>
+      {blob}
         <img src={image} alt={title} />
       </div>
       <div className={DescriptionBlock}>

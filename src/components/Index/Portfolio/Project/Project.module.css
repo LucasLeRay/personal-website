@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 50px 0;
+  margin: 50px 0 100px;
 }
 
 .Reverse {
@@ -10,25 +10,35 @@
 }
 
 .ImageBlock {
+  position: relative;
   display: flex;
+  align-items: center;
   justify-content: center;
   flex-direction: row-reverse;
-  margin: 0 80px 0 0;
+  margin: 0 20px 0 0;
 }
 
 .Reverse .ImageBlock {
   flex-direction: row;
-  margin: 0 0 0 80px;
+  margin: 0 0 0 20px;
 }
 
 .ImageBlock img {
+  z-index: 1;
   width: 400px;
   height: 100%;
+  border-radius: 5px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.16);
+}
+
+.ImageBlock svg {
+  position: absolute;
+  z-index: 0;
 }
 
 .DescriptionBlock {
-  max-width: 450px;
-  color: #0e131b;
+  max-width: 600px;
+  color: #73889f;
   padding: 0 20px 0 50px;
 }
 
@@ -37,7 +47,7 @@
 }
 
 .LinksWrapper a {
-  color: #e96835;
+  color: #eb3349;
   text-decoration: none;
   margin-right: 15px;
   font-weight: bold;
@@ -55,13 +65,13 @@
 
 .Text p {
   font-size: 16px;
-  line-height: 25x;
+  line-height: 25px;
 }
 
 .Text a {
   text-decoration: none;
   font-weight: bold;
-  color: #0e131b;
+  color: #eb3349;
 }
 
 @media (min-width: 600px) {
@@ -73,7 +83,7 @@
 @media (max-width: 1200px) {
   .Container {
     flex-direction: column-reverse;
-    margin: 25px auto;
+    margin: 25px auto 50px;
   }
 
   .DescriptionBlock {
@@ -86,12 +96,12 @@
   }
 
   .ImageBlock {
-    margin: 40px 0;
+    margin: 80px 0;
     width: 100%;
   }
 
   .Reverse .ImageBlock {
-    margin: 40px 0;
+    margin: 80px 0;
   }
 }
 
@@ -106,5 +116,9 @@
 
   .ImageBlock img {
     width: 250px;
+  }
+
+  .ImageBlock svg {
+    width: 100%;
   }
 }

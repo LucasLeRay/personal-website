@@ -28,7 +28,7 @@ function AboutMe() {
           <div className={RoleList}>
             <a
               className={Role}
-              href="https://transpare.fr"
+              href="https://transpare.eu"
               target="_blank"
               rel="noopener noreferrer"
             >
