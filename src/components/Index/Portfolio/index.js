@@ -1,18 +1,20 @@
-import React from "react";
+import React from "react"
 
 import {
   Container,
   ContainerWrapper,
   ContentWrapper,
-} from "./Portfolio.module.css";
+} from "./Portfolio.module.css"
 
-import Project from "./Project";
-import transpare from "./projects/transpare.png";
-import crowdstar from "./projects/crowdstar.png";
-import blog from "./projects/blog.png";
+import Project from "./Project"
+import transpare from "./projects/transpare.png"
+import crowdstar from "./projects/crowdstar.png"
+import sheltin from "./projects/sheltin.jpg"
+import blog from "./projects/blog.png"
 import Blob1 from './blobs/blob1.svg'
 import Blob2 from './blobs/blob2.svg'
 import Blob3 from './blobs/blob3.svg'
+import Blob4 from './blobs/blob4.svg'
 
 function Portfolio() {
   return (
@@ -99,10 +101,27 @@ function Portfolio() {
               I design and develop the website you are currently on. I use React (with Gatsby) for the front-end and Netlify functions for the back-end, as it is hosted on Netlify.
             </p>
           </Project>
+          <Project
+            title="Shelt.In"
+            date="Nov. 2018"
+            image={sheltin}
+            blob={<Blob4 />}
+            reverse
+            links={[
+              {
+                name: "Landing page",
+                url: "https://shelt.in",
+              },
+            ]}
+          >
+            <p>
+              Shelt.In is a portable connected equipment (IOT) that retrieves information on the firefighter's state of health, geographical position and environment and communicates it to the intervention chief. The device works with Arduino and the dashboard is developed with Vue.JS and Strapi.
+            </p>
+          </Project>
         </div>
       </div>
     </section>
-  );
+  )
 }
 
-export default Portfolio;
+export default Portfolio
