@@ -1,5 +1,5 @@
 ---
-path: "/blog/build-serverless-graphql-api.md"
+path: "/blog/build-serverless-graphql-api"
 date: "2020-11-14"
 title: "Build a Serverless GraphQL API on AWS [Tutorial]"
 time: 4
