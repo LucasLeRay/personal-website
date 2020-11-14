@@ -291,4 +291,4 @@ And there's more you can do:
 
 If you want to learn more about **Serverless**, I recommend you to read the [Serverless Handbook](https://serverlesshandbook.dev).
 
-If you liked this article, you can [follow me on Twitter](http://twitter.com/intent/user?screen_name=Lucas_Le_Ray) as a share a lot of things related to **Serverless** and **GraphQL**.
+If you liked this article, you can [follow me on Twitter](http://twitter.com/intent/user?screen_name=Lucas_Le_Ray) as I share a lot of things related to **Serverless** and **GraphQL**.
