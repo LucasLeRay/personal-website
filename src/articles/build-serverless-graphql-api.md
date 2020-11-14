@@ -132,7 +132,7 @@ type Item {
 ```
 In the schema, We're defining what's an `Item`: an entity containing `id` and `content`. We also define a mutation `createItem`, which creates an item from a `content`, and a query `item` which gets it from an `id`. 
 
-Now, add the following to `src/graphql.js`:
+Now, add the following in `src/graphql.js`:
 ```javascript
 const fs = require('fs')
 const { ApolloServer, gql } = require('apollo-server-lambda')
@@ -159,7 +159,7 @@ exports.handler = server.createHandler();
 This code will create an **Apollo** server and return a response, using the `schema` and the `resolvers`. You can test it in `localhost:3000/dev/graphql`:
 ![Apollo server test](/articles/build-serverless-graphql-api/2.png)
 
-As you can see, it works ! But our resolvers are not doing anything, that's why `item` is null.
+As you can see, it works ! But our resolvers don't do anything, that's why `item` is null.
 The next step is to use real data from a database.
 
 ---
@@ -194,7 +194,7 @@ resources:
           WriteCapacityUnits: 1
         TableName: ${self:provider.environment.ITEM_TABLE}
 ```
-We are asking Serverless to create a new table for `items` and to give Lambda permissions to interact with it. More infos on the [Serverless documentation](https://www.serverless.com/dynamodb).
+We are asking Serverless to create a new table for `items` and to give the Lambda the permissions to interact with it. More infos on the [Serverless documentation](https://www.serverless.com/dynamodb).
 
 Now we can interact with our new **DynamoDB** table through the `aws-sdk`:
 ```bash
@@ -286,7 +286,7 @@ And there's more you can do:
 - Add `updateItem` and `deleteItem` mutations
 - Add **ESLint** & **Prettier** for code readability
 - Use **TypeScript** instead of plain **Javascript**
-- Add authentication through **AWS Cognito**
+- Add authentication with **AWS Cognito**
 - etc.  
 
 If you want to learn more about **Serverless**, I recommend you to read the [Serverless Handbook](https://serverlesshandbook.dev).
