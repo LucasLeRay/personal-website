@@ -35,7 +35,7 @@ function AboutMe() {
               <div>
                 <img alt="Transpare" src={transpareLogo} />
               </div>
-              <h3>Lead Developer @ Transpare</h3>
+              <h3>CTO @ Transpare</h3>
             </a>
             <a
               className={Role}
