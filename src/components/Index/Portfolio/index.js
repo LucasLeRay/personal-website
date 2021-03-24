@@ -11,10 +11,12 @@ import transpare from "./projects/transpare.png"
 import crowdstar from "./projects/crowdstar.png"
 import sheltin from "./projects/sheltin.jpg"
 import blog from "./projects/blog.png"
+import tweetStream from "./projects/tweet-stream.png"
 import Blob1 from './blobs/blob1.svg'
 import Blob2 from './blobs/blob2.svg'
 import Blob3 from './blobs/blob3.svg'
 import Blob4 from './blobs/blob4.svg'
+import Blob5 from './blobs/blob5.svg'
 
 function Portfolio() {
   return (
@@ -22,10 +24,27 @@ function Portfolio() {
       <div className={ContainerWrapper}>
         <div className={ContentWrapper}>
           <Project
+            title="Real-time Tweet sentiment analysis"
+            date="Mar. 2021"
+            image={tweetStream}
+            blob={<Blob5 />}
+            links={[
+              {
+                name: "GitHub",
+                url: "https://github.com/LucasLeRay/twitter-stream-aws",
+              },
+            ]}
+          >
+            <p>
+              A serverless application that stream Tweets into Elasticsearch and Kibana through AWS Kinesis Data Firehose. A custom lambda transform data in the stream to add the sentiment associated with the Tweet.
+            </p>
+          </Project>
+          <Project
             title="CrowdStar"
             date="Apr. 2020"
             image={crowdstar}
             blob={<Blob1 />}
+            reverse
             links={[
               {
                 name: "Application",
@@ -55,7 +74,6 @@ function Portfolio() {
             </p>
           </Project>
           <Project
-            reverse
             title="Transpare Marketplace"
             date="Apr. 2019"
             image={transpare}
@@ -86,6 +104,7 @@ function Portfolio() {
             date="Jan. 2019"
             image={blog}
             blob={<Blob3 />}
+            reverse
             links={[
               {
                 name: "Blog",
@@ -106,7 +125,6 @@ function Portfolio() {
             date="Nov. 2018"
             image={sheltin}
             blob={<Blob4 />}
-            reverse
             links={[
               {
                 name: "Landing page",
