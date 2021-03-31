@@ -6,13 +6,15 @@ time: 4
 cover: "/articles/real-time-tweets-analysis-aws/1.png"
 ---
 
-As you know if you read my articles, I love building stuff with the Twitter API. Even if the API is... the way it is (**[it should be way better with the v2 !](https://blog.twitter.com/engineering/en_us/topics/infrastructure/2020/rebuild_twitter_public_api_2020.html)**), having the ability to analyze such a huge amount of tweets is very powerful. And it's very easy to use, in just a few lines of code I can get the tweets containing a certain hashtag. Such as this one, full of wisdom:
+As you know if you read my articles, I love building stuff with the Twitter API.    
+
+Getting and analyzing tweets is very powerful, and yet so easy to do. In just a few lines of code I have access to a colossale amount of tweets. Such as this one, full of wisdom:
 
 https://twitter.com/dabit3/status/1373969960062439431
 
-But it's harder when it comes to building such an application for a real case. Let's say I want to analyze the sentiments of people related to an event (political elections, for example), in real time and on the cloud. How am I supposed to do ?
+But things get more complicated when it comes to real-world scenarios. For example, how do you do sentiment analysis in real time and in the cloud?
 
-This is what I will explain in this article. More precisely, we are going to build a **Real-time Tweets sentiment analysis program with AWS** (Amazon Web Services).
+In this article, I will show you how to take advantage of cloud providers to build these kinds of applications. More precisely, we are going to build a **Real-time Tweets sentiment analysis program with AWS** (Amazon Web Services).
 
 The full code of this tutorial is **[available on GitHub](https://github.com/LucasLeRay/twitter-stream-aws)**, feel free to use it for your next project ! **(Don't forget the star 👀)**
 
@@ -25,19 +27,21 @@ To build such an application, you'll have to:
 - [Setup an AWS account](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/)
 - [Setup a Twitter Development account](https://developer.twitter.com/)
 
+Also, basic knowledge of AWS and Python is expected
+
 ---
 
 ## Tweet streaming architecture in AWS
 
 We want our application to do the following steps:
 
-1. Connect to the **[Twitter Streaming API](https://developer.twitter.com/en/docs/tutorials/consuming-streaming-data)** with an ingestion script and wait for new Tweets.
-2. On new Tweets, send a record containing its content to a delivery stream, using **[Amazon Kinesis Data Firehose](https://aws.amazon.com/fr/kinesis/data-firehose/)**.
-3. In the stream, add the sentiment associated with the Tweet content using a custom **[AWS Lambda](https://aws.amazon.com/fr/lambda/)**and **[Amazon Comprehend](https://aws.amazon.com/fr/comprehend/)**.
-4. Send the record to an **[Elasticsearch domain](https://aws.amazon.com/fr/elasticsearch-service/)**, accessible by **[Kibana](https://www.elastic.co/fr/kibana)** for visualization.
-5. In case of an error in the stream, send the failed record in an **[Amazon S3](https://aws.amazon.com/fr/s3/)** bucket
+1. Connect to the **[Twitter Streaming API](https://developer.twitter.com/en/docs/tutorials/consuming-streaming-data)** and wait for new Tweets.
+2. Send new Tweets to an **[Amazon Kinesis Data Firehose](https://aws.amazon.com/fr/kinesis/data-firehose/)** delivery stream.
+3. Add the sentiment associated with the Tweet using **[Amazon Comprehend](https://aws.amazon.com/fr/comprehend/)**.
+4. Send tweets to an **[Elasticsearch domain](https://aws.amazon.com/fr/elasticsearch-service/)**, accessible by **[Kibana](https://www.elastic.co/fr/kibana)** for visualization.
+5. In case of an error, send the failed record in an **[Amazon S3](https://aws.amazon.com/fr/s3/)** bucket.
 
-Here is the diagram describing the full process:
+Here it the full process:
 
 ![Tweet Stream architecture](/articles/real-time-tweets-analysis-aws/2.png)
 
@@ -46,7 +50,7 @@ Here is the diagram describing the full process:
 
 ## Deploy AWS resources with Serverless
 
-The [Serverless framework](https://www.serverless.com/) allows you to deploy serverless applications to the cloud, in this case AWS. We'll use it to deploy our custom lambda, and to setup each AWS services we are going to use.
+With the [Serverless framework](https://www.serverless.com/) you can deploy serverless applications to the cloud. We'll use it to deploy our custom Lambda and other AWS services.  
 
 - Install Serverless with:
 
@@ -54,7 +58,7 @@ The [Serverless framework](https://www.serverless.com/) allows you to deploy ser
 yarn global add serverless
 ```
 
-- Create the Serverless config file `serverless.yml`, and copy the [content from this file on GitHub](https://github.com/LucasLeRay/twitter-stream-aws).
+- Create the Serverless config file `serverless.yml`, and copy the content from [this file on GitHub](https://github.com/LucasLeRay/twitter-stream-aws).
 
 ```yaml
 service: twitter-stream-aws # service name
@@ -82,33 +86,23 @@ plugins: # Serverless plugins
 This file does 3 things:
 
 - Configure Serverless framework
-- Configure the `transformTweets` lambda (which add sentiments to tweets)
-- Configure other AWS services (such as Kinesis Data Firehose or ElasticSearch)
+- Setup `transformTweets` lambda (which add sentiments to tweets)
+- Define other AWS services (such as Kinesis Data Firehose or ElasticSearch)
 
-If you want details about Serverless configuration, [this article is a wonderful source of informations](https://www.serverless.com/framework/docs/providers/aws/guide/serverless.yml/).
+If you want details about Serverless configuration, [this article](https://www.serverless.com/framework/docs/providers/aws/guide/serverless.yml/) is a wonderful source of informations.
 
 ---
 
 ## Develop a record transformation lambda
 
-Before deploying our AWS services, we need to code the lambda responsible for data transformation in the delivery stream.
+Now, let's code the `transformTweet` Lambda.  
+We want this Lambda to:
 
-- Create a new function called `transformTweets` in `handler.py`:
+- Get Tweets from the stream
+- Get the associated sentiments
+- Send the records back to the stream, with sentiments
 
-```python
-def transformTweets(event, context):
-  output = []
-
-  return {'records': output}
-```
-
-We want our function to:
-
-- Get records from the stream
-- Get the sentiment
-- Send the records back to the stream, with the associated sentiment
-
-The final function should look like this:
+Create a fuction `transformTweets` in `handler.py` with the following content:
 
 ```python
 import base64
@@ -139,11 +133,12 @@ def transformTweets(event, context):
     return {'records': output}
 ```
 
-As you can see, this function get records from `event['records']`, get the associated sentiments using Comprehend's `detect_sentiment` function, and wrap the response in the correct format before returning it.
+As you can see, this function:
+- Get records from `event['records']`
+- Get the associated sentiments using Comprehend's `detect_sentiment` function
+- Wrap the response in the correct format before returning it.
 
- 
-
-- Think to install `boto3` and add it to a `requirements.txt` file so Serverless can use it in the cloud:
+Think to install `boto3` and add it to a `requirements.txt` file so Serverless can use it in the cloud:
 
 ```bash
 pip3 install boto3
