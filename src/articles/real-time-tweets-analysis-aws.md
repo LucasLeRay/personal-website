@@ -102,7 +102,7 @@ We want this Lambda to:
 - Get the associated sentiments
 - Send the records back to the stream, with sentiments
 
-Create a fuction `transformTweets` in `handler.py` with the following content:
+Create a function `transformTweets` in `handler.py` with the following content:
 
 ```python
 import base64
@@ -148,16 +148,16 @@ pip3 freeze > requirements.txt
 - Now, you can deploy with:
 
 ```bash
-sls deploy
+serverless deploy
 ```
 
-⛔️ You may need to first deploy without these lines in `serverless.yml`:
+⛔️ If the command fails, deploy a first time without these lines in `serverless.yml`:
 
-```bash
+```yaml
 ...
 ElasticSearch:
   ...
-	AccessPolicies: # REMOVE THIS STATEMENT FOR THE FIRST DEPLOYMENT
+	AccessPolicies: # REMOVE THIS POLICY FOR THE FIRST DEPLOYMENT
 	  Version: "2012-10-17"
 	  Statement:
 	    - Effect: "Allow"
@@ -166,12 +166,14 @@ ElasticSearch:
 	      Action: "es:*"
 	      Resource:
 	        - arn:aws:es:us-east-1:*:domain/${self:custom.es-config.domainName}/*
-	...
+  ...
 ```
 
-Indeed, AWS block public access to your Elasticsearch domain. In this tutorial the access is public for simplicity, but you should not let it like this on production, really. Anyway, deploy a first time without these line and a second time with them.
+Indeed, AWS refuses to give public access to your Elasticsearch domain, which we do in this tutorial for simplicity. Keep in mind that in production, your domain should not be public.  
 
-On the second deploy, you should have this message logged in your console:
+Anyway, deploy a first time without these lines and a second time with.
+
+If everything worked, you should have this message in your console:
 
 ```bash
 > serverless deploy
@@ -199,11 +201,12 @@ Wouhou ! Everything worked ! 🎉
 
 ## Develop the Ingestion script
 
+
 Everything is now deployed on AWS ! The stream, the processor lambda, the Elasticsearch domain...
 
 But all of this is useless until messages are sent to the stream !
 
-To do this, we'll develop a script which:
+To do this, we'll develop a script that:
 
 - Get new tweets from Twitter Streaming API
 - On new tweet, send its content to the stream
@@ -253,21 +256,21 @@ stream = Stream(auth, l)
 stream.filter(track=sys.argv[1:])
 ```
 
-This script will listen for new tweets containing specified words and put new records into our delivery stream when it happens.
+This script will listen for new tweets containing words specified in parameters. On new Tweets, it'll send them into our delivery stream.
 
 Here is a few things to note about this piece of code:
 
-- We get Twitter API keys from environments, so you also need to add them in your `.env`.
+- We get Twitter API keys from environments, so you need to add them in your `.env` file.
 - To use `boto3` you need to have configured `AWS` in your machine or to add your API key directly in `boto3.client` ([check the boto3 documentation here](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html)).
 - To understand how `Tweepy` works, [check the documentation here](https://www.tweepy.org).
 
 We can now launch the script like this:
 
 ```bash
-> python3 stream.py "#HandsomeLucas" "#SmartLucas"
+> python3 stream.py "#USElection2020"
 ```
 
-*This command will launch the script and listen for new tweets containing either "#HandsomeLucas" or "#SmartLucas" (a.k.a: only best tweets)*
+*The script will listen and send in the delivery stream the tweets concerning the US presidential election of 2020*
 
 While this script is running, new tweets will:
 
@@ -279,19 +282,19 @@ While this script is running, new tweets will:
 
 ## Show Kibana statistics from Elasticsearch domain
 
-Kibana is a data visualization dashboard for Elasticsearch. Thanks to Kibana, we can build a pie containing the different sentiments of the tweets.
+Kibana is a data visualization dashboard for Elasticsearch. We'll use it to build a pie containing the different sentiments of the Tweets.
 
 To visualize the records (and check if everything works), go to your AWS Console, in your new Elasticsearch domain.
 
 ![AWS Elasticsearch domain](/articles/real-time-tweets-analysis-aws/3.png)
 
-- The `Kibana` attribute specify the link to the `Kibana` plugin link (If the link is forbidden, make sure you deployed your Serverless service with the Elasticsearch domain access policies)
+- The `Kibana` attribute specify the link to the `Kibana` plugin link (If it returns an error, make sure you deployed your Serverless service with the Elasticsearch domain access policies)
 
 When you go here, you should see this screen:
 
 ![Kibana Elasticsearch index](/articles/real-time-tweets-analysis-aws/4.png)
 
-The "index pattern" `tweet*` allows use to retrieve data from Elasticsearch with an index pattern beginning with `tweet` (as described in `serverless.yml`).
+The "index pattern" `tweet*` allows us to retrieve data from Elasticsearch with an index pattern beginning with `tweet` (as described in `serverless.yml`).
 
 - Complete the index pattern creation with index pattern being `tweet*` and create a new pie in the Visualize part
 
@@ -306,7 +309,7 @@ Tadaa ! You retrieve sentiments from tweets in real time ! 🎉
 In this tutorial, you learnt to:
 
 - Create an AWS application using Serverless framework
-- Deploy a lambda to the cloud
+- Deploy a Lambda to the cloud
 - Use the Twitter Streaming API
 - Send data to AWS Kinesis Data Firehose
 - Get sentiments of text using AWS Comprehend
