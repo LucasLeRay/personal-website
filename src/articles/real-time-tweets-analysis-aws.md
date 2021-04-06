@@ -14,7 +14,7 @@ https://twitter.com/dabit3/status/1373969960062439431
 
 But things get more complicated when it comes to real-world scenarios. For example, how do you do sentiment analysis in real time and in the cloud?
 
-In this article, I will show you how to take advantage of cloud providers to build these kinds of applications. More precisely, we are going to build a **Real-time Tweets sentiment analysis program with AWS** (Amazon Web Services).
+In this article, you'll learn how to take advantage of cloud providers to build such applications. More precisely, you are going to build a **Real-time Tweets sentiment analysis program with AWS** (Amazon Web Services).
 
 The full code of this tutorial is **[available on GitHub](https://github.com/LucasLeRay/twitter-stream-aws)**, feel free to use it for your next project ! **(Don't forget the star 👀)**
 
@@ -41,7 +41,7 @@ We want our application to do the following steps:
 4. Send tweets to an **[Elasticsearch domain](https://aws.amazon.com/fr/elasticsearch-service/)**, accessible by **[Kibana](https://www.elastic.co/fr/kibana)** for visualization.
 5. In case of an error, send the failed record in an **[Amazon S3](https://aws.amazon.com/fr/s3/)** bucket.
 
-Here it the full process:
+Here is the full process:
 
 ![Tweet Stream architecture](/articles/real-time-tweets-analysis-aws/2.png)
 
@@ -58,7 +58,7 @@ With the [Serverless framework](https://www.serverless.com/) you can deploy serv
 yarn global add serverless
 ```
 
-- Create the Serverless config file `serverless.yml`, and copy the content from [this file on GitHub](https://github.com/LucasLeRay/twitter-stream-aws).
+- Create the Serverless config file `serverless.yml`, and copy the content from [this file (GitHub)](https://github.com/LucasLeRay/twitter-stream-aws).
 
 ```yaml
 service: twitter-stream-aws # service name
@@ -201,17 +201,15 @@ Wouhou ! Everything worked ! 🎉
 
 ## Develop the Ingestion script
 
-
 Everything is now deployed on AWS ! The stream, the processor lambda, the Elasticsearch domain...
 
-But all of this is useless until messages are sent to the stream !
-
+But all this is useless until messages are sent to the stream !
 To do this, we'll develop a script that:
 
 - Get new tweets from Twitter Streaming API
 - On new tweet, send its content to the stream
 
-Here's a script that does all of this:
+Here's a script that does that:
 
 ```python
 import sys
@@ -270,7 +268,7 @@ We can now launch the script like this:
 > python3 stream.py "#USElection2020"
 ```
 
-*The script will listen and send in the delivery stream the tweets concerning the US presidential election of 2020*
+*The script will listen and send in the delivery stream the tweets about the US presidential election of 2020*
 
 While this script is running, new tweets will:
 
@@ -284,19 +282,19 @@ While this script is running, new tweets will:
 
 Kibana is a data visualization dashboard for Elasticsearch. We'll use it to build a pie containing the different sentiments of the Tweets.
 
-To visualize the records (and check if everything works), go to your AWS Console, in your new Elasticsearch domain.
+To visualize records (and check if everything works), go to your AWS Console, in your new Elasticsearch domain.
 
 ![AWS Elasticsearch domain](/articles/real-time-tweets-analysis-aws/3.png)
 
-- The `Kibana` attribute specify the link to the `Kibana` plugin link (If it returns an error, make sure you deployed your Serverless service with the Elasticsearch domain access policies)
+- The `Kibana` attribute specify the link to the `Kibana` plugin link. If the link doesn't work, make sure your Elasticsearch domain has public access.
 
-When you go here, you should see this screen:
+By clicking this link, you should see this screen:
 
 ![Kibana Elasticsearch index](/articles/real-time-tweets-analysis-aws/4.png)
 
-The "index pattern" `tweet*` allows us to retrieve data from Elasticsearch with an index pattern beginning with `tweet` (as described in `serverless.yml`).
+The **index pattern** `tweet*` allows Kibana to retrieve our tweets from Elasticsearch.
 
-- Complete the index pattern creation with index pattern being `tweet*` and create a new pie in the Visualize part
+- Complete the index pattern creation and create a new pie in the Visualize part with the following configuration:
 
 ![Kibana pie chart](/articles/real-time-tweets-analysis-aws/5.png)
 
