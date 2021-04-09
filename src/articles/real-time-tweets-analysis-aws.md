@@ -2,7 +2,7 @@
 path: "/blog/real-time-tweets-analysis-aws"
 date: "2021-03-24"
 title: "Real time tweets analysis with AWS"
-time: 4
+time: 6
 cover: "/articles/real-time-tweets-analysis-aws/1.png"
 ---
 
@@ -58,7 +58,7 @@ With the [Serverless framework](https://www.serverless.com/) you can deploy serv
 yarn global add serverless
 ```
 
-- Create the Serverless config file `serverless.yml`, and copy the content from [this file (GitHub)](https://github.com/LucasLeRay/twitter-stream-aws).
+- Create the Serverless config file `serverless.yml`, and copy the content from [this file (GitHub)](https://github.com/LucasLeRay/twitter-stream-aws/blob/master/serverless.yml).
 
 ```yaml
 service: twitter-stream-aws # service name
@@ -76,7 +76,7 @@ functions:
     handler: handler.transformTweets # function endpoint
     timeout: 60 # function timeout (in seconds)
 
-resources: # other AWS services configuration
+resources: # AWS CloudFormation resources
   ...
 
 plugins: # Serverless plugins
@@ -151,7 +151,7 @@ pip3 freeze > requirements.txt
 serverless deploy
 ```
 
-⛔️ If the command fails, deploy a first time without these lines in `serverless.yml`:
+⛔️ If the command fails, deploy a first time without lines 73-81 in `serverless.yml`:
 
 ```yaml
 ...
@@ -194,8 +194,7 @@ functions:
 layers:
   None
 ```
-
-Wouhou ! Everything worked ! 🎉
+###### Everything worked ! 🎉
 
 ---
 
@@ -298,7 +297,7 @@ The **index pattern** `tweet*` allows Kibana to retrieve our tweets from Elastic
 
 ![Kibana pie chart](/articles/real-time-tweets-analysis-aws/5.png)
 
-Tadaa ! You retrieve sentiments from tweets in real time ! 🎉
+###### Tadaa ! You retrieve sentiments from tweets in real time ! 🎉
 
 ---
 
