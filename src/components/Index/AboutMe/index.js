@@ -11,7 +11,7 @@ import {
 } from "./AboutMe.module.css";
 
 import pictureMe from "./img/me.png";
-import sheltinLogo from "./img/sheltin.png";
+import awsmlLogo from "./img/aws-ml.png";
 import berkeleyLogo from "./img/berkeley.png";
 import transpareLogo from "./img/transpare.png";
 
@@ -39,14 +39,14 @@ function AboutMe() {
             </a>
             <a
               className={Role}
-              href="https://shelt.in"
+              href="https://www.credly.com/badges/c81369a5-3801-4691-b408-202d06fda56b/public_url"
               target="_blank"
               rel="noopener noreferrer"
             >
               <div>
-                <img alt="Shelt.In" src={sheltinLogo} />
+                <img alt="AWS Machine Learning - Specialist" src={awsmlLogo} />
               </div>
-              <h3>CEO @ Shelt.In</h3>
+              <h3>Certified Machine Learning Specialist @ AWS</h3>
             </a>
             <a
               className={Role}
@@ -57,7 +57,7 @@ function AboutMe() {
               <div>
                 <img alt="UC Berkeley" src={berkeleyLogo} />
               </div>
-              <h3>Alumni @ UC Berkeley</h3>
+              <h3>Alumni @ UC Berkeley & Epitech</h3>
             </a>
           </div>
         </div>

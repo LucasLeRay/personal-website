@@ -15,7 +15,7 @@ function Hero() {
         </h1>
         <h2>
           I mainly share my experience in making bootstrapped projects and
-          programming web stuff.
+          using Machine Learning.
         </h2>
       </div>
       <MovingWave className={WaveWrapper} />
