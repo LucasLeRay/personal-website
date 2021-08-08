@@ -13,7 +13,7 @@ import {
 import pictureMe from "./img/me.png";
 import awsmlLogo from "./img/aws-ml.png";
 import berkeleyLogo from "./img/berkeley.png";
-import transpareLogo from "./img/transpare.png";
+import nibbleLogo from "./img/nibble.png";
 
 function AboutMe() {
   return (
@@ -28,14 +28,14 @@ function AboutMe() {
           <div className={RoleList}>
             <a
               className={Role}
-              href="https://transpare.eu"
+              href="https://nibble.ai"
               target="_blank"
               rel="noopener noreferrer"
             >
               <div>
-                <img alt="Transpare" src={transpareLogo} />
+                <img alt="Nibble" src={nibbleLogo} />
               </div>
-              <h3>CTO @ Transpare</h3>
+              <h3>ML Engineer @ Nibble</h3>
             </a>
             <a
               className={Role}
