@@ -47,10 +47,6 @@ function Portfolio() {
             reverse
             links={[
               {
-                name: "Application",
-                url: "https://crowdstar.xyz",
-              },
-              {
                 name: "Product Hunt",
                 url: "https://www.producthunt.com/posts/crowdstar",
               },
