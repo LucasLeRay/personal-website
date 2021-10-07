@@ -15,7 +15,7 @@ function Hero() {
           Hi, I'm Lucas ! <img src={emojiVictory} alt="hello" />
         </h1>
         <h2>
-          I'm a Machine Learning Engineer and a Maker.
+          I'm a Machine Learning Engineer and a Délice.
           <br />
           You can see my resume by{" "}
           <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
