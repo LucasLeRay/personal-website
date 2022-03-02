@@ -1,0 +1,354 @@
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  color: #000;
+  height: 100vh;
+}
+
+.App > * {
+  margin: 0 50px;
+}
+
+.App h1 {
+  font-weight: 300;
+  font-size: 92px;
+  margin: 0;
+}
+
+.App b {
+  font-weight: 500;
+}
+
+.App p {
+  margin: 44px 0;
+  line-height: 36px;
+  width: 620px;
+  font-size: 24px;
+}
+
+.App p a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #000;
+}
+
+.App .Links {
+  display: flex;
+}
+
+.App .Links a {
+  position: relative;
+  font-size: 24px;
+  margin-right: 50px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #000;
+}
+
+.App .Links a:after {
+  top: -5px;
+  right: -27px;
+  position: absolute;
+  display: inline-flex;
+  content: url('../public/arrow-up-right.svg');
+  width: 26px;
+  height: 26px;
+  transition: all 0.15s ease-in-out;
+}
+
+.App .Links a:hover:after {
+  transform: translateX(3px) translateY(-3px);
+}
+
+.App img {
+  border-radius: 50%;
+  width: 480px;
+  height: 480px;
+  object-fit: cover;
+}
+
+@media (max-width: 1600px) {
+  .App span {
+    font-size: 80px;
+  }
+  
+  .App h1 {
+    font-size: 80px;
+  }
+
+  .App p {
+    margin: 36px 0;
+    width: 620px;
+    font-size: 22px;
+  }
+
+  .App .Links a {
+    font-size: 22px;
+  }
+
+  .App .Links a:after {
+    width: 24px;
+    height: 24px;
+  }
+
+  .App img {
+    width: 480px;
+    height: 480px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .App h1 {
+    font-size: 72px;
+  }
+
+  .App p {
+    margin: 32px 0;
+    width: 540px;
+    font-size: 20px;
+  }
+
+  .App .Links a {
+    font-size: 20px;
+  }
+
+  .App .Links a:after {
+    width: 22px;
+    height: 22px;
+  }
+
+  .App img {
+    width: 440px;
+    height: 440px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .App span {
+    font-size: 60px;
+  }
+  
+  .App h1 {
+    font-size: 60px;
+  }
+
+  .App p {
+    margin: 32px 0;
+    width: 460px;
+    font-size: 20px;
+  }
+
+  .App .Links a {
+    font-size: 20px;
+  }
+
+  .App .Links a:after {
+    width: 22px;
+    height: 22px;
+  }
+
+  .App img {
+    width: 340px;
+    height: 340px;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 1000px) {
+  .App h1 {
+    font-size: 52px;
+  }
+
+  .App p {
+    margin: 32px 0;
+    width: 400px;
+    font-size: 18px;
+  }
+
+  .App .Links a {
+    font-size: 18px;
+  }
+
+  .App .Links a:after {
+    width: 20px;
+    height: 20px;
+  }
+
+  .App img {
+    width: 300px;
+    height: 300px;
+    margin-left: 0;
+    margin-right: 20px;
+  }
+
+  .App > .Left {
+    margin-right: 0;
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  .App {
+    flex-direction: column;
+  }
+
+  .App .Left {
+    max-width: 480px;
+  }
+
+  .App h1 {
+    text-align: center;
+    font-size: 36px;
+  }
+
+  .App p {
+    margin: 32px 0;
+    text-align: center;
+    width: auto;
+    line-height: 28px;
+    font-size: 16px;
+  }
+
+  .App img {
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    max-height: 300px;
+    margin: 40px auto 0;
+  }
+
+  .App .Links a {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+  }
+
+  .App .Links a:after {
+    top: -6px;
+    right: -26px;
+  }
+
+  .App .Links div {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .App .Links {
+    justify-content: space-between;
+    margin: 0 24px 0 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .App h1 {
+    font-size: 32px;
+  }
+
+  .App img {
+    max-width: 200px;
+    max-height: 200px;
+  }
+
+  .App p {
+    margin: 28px 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .App .Links {
+    margin-right: 16px;
+    justify-content: space-around;
+  }
+
+  .App .Links div {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+
+
+
+/* @media (max-width: 800px) {
+  .App {
+    flex-direction: column;
+  }
+
+  .App h1 {
+    text-align: center;
+    font-size: 32px;
+  }
+
+  .App p {
+    text-align: center;
+    margin: 28px 0;
+    width: 100%;
+    line-height: 28px;
+    font-size: 16px;
+  }
+
+  .App img {
+    width: 100%;
+    height: 100%;
+    max-width: 200px;
+    max-height: 200px;
+    margin: 40px auto 0;
+  }
+
+  .App .Links {
+    margin-right: 16px;
+    justify-content: space-around;
+  }
+
+  .App .Links div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .App .Links a {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+  }
+
+  .App .Links a:after {
+    top: -6px;
+    right: -26px;
+  }
+}
+
+@media (min-width: 600px) {
+  .App img {
+    max-width: 300px;
+    max-height: 300px;
+  }
+
+  .App p {
+    width: auto;
+    margin: 28px 100px;
+  }
+
+  .App .Links {
+    width: auto;
+    margin: 0 124px 0 100px;
+  }
+}
+
+@media (min-width: 480px) {
+  .App .Links {
+    margin-right: 0;
+    justify-content: space-between;
+    margin-right: 24px;
+  }
+
+  .App .Links div {
+    justify-content: space-around;
+    flex-direction: row;
+    width: 100%;
+  }
+} */
