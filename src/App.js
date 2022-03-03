@@ -18,7 +18,7 @@ function App() {
             </div>
           </div>
       </div>
-      <img src={me} />
+      <img src={me} alt="Lucas Le Ray"/>
     </div>
   );
 }
