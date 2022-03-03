@@ -9,7 +9,7 @@ function App() {
           <p>I'm a <b>Machine Learning Engineer</b> based in <b>London</b> and working at <a href="https://nibble.ai" target="_blank" rel="noopener noreferrer">nibble</a>. I'm passionate about <b>computational psychology</b> and <b>social sciences</b>.</p>
           <div className="Links">
             <div>
-              <a href="https://lucas-le-ray.medium.com" target="_blank" rel="noopener noreferrer">articles</a>
+              <a href="https://lucas-le-ray.notion.site/Blog-8c05f99842a840fd9c73c2fa508437f8" target="_blank" rel="noopener noreferrer">articles</a>
               <a href="https://twitter.com/Lucas_Le_Ray" target="_blank" rel="noopener noreferrer">twitter</a>
             </div>
             <div>
