@@ -1,5 +1,5 @@
 import './App.css';
-import me from './img/me.jpeg';
+import profile_src from './img/me.jpeg';
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
             </div>
           </div>
       </div>
-      <img src={me} alt="Lucas Le Ray"/>
+      <img src={profile_src} alt="Lucas Le Ray"/>
     </div>
   );
 }
