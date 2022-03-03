@@ -94,8 +94,8 @@
   }
 
   .App img {
-    width: 480px;
-    height: 480px;
+    width: 420px;
+    height: 420px;
   }
 }
 
@@ -195,6 +195,7 @@
   }
 
   .App .Left {
+    margin: 0 50px;
     max-width: 480px;
   }
 
@@ -270,85 +271,3 @@
     flex-direction: column;
   }
 }
-
-
-
-
-
-/* @media (max-width: 800px) {
-  .App {
-    flex-direction: column;
-  }
-
-  .App h1 {
-    text-align: center;
-    font-size: 32px;
-  }
-
-  .App p {
-    text-align: center;
-    margin: 28px 0;
-    width: 100%;
-    line-height: 28px;
-    font-size: 16px;
-  }
-
-  .App img {
-    width: 100%;
-    height: 100%;
-    max-width: 200px;
-    max-height: 200px;
-    margin: 40px auto 0;
-  }
-
-  .App .Links {
-    margin-right: 16px;
-    justify-content: space-around;
-  }
-
-  .App .Links div {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .App .Links a {
-    margin: 0 0 10px 0;
-    font-size: 16px;
-  }
-
-  .App .Links a:after {
-    top: -6px;
-    right: -26px;
-  }
-}
-
-@media (min-width: 600px) {
-  .App img {
-    max-width: 300px;
-    max-height: 300px;
-  }
-
-  .App p {
-    width: auto;
-    margin: 28px 100px;
-  }
-
-  .App .Links {
-    width: auto;
-    margin: 0 124px 0 100px;
-  }
-}
-
-@media (min-width: 480px) {
-  .App .Links {
-    margin-right: 0;
-    justify-content: space-between;
-    margin-right: 24px;
-  }
-
-  .App .Links div {
-    justify-content: space-around;
-    flex-direction: row;
-    width: 100%;
-  }
-} */
