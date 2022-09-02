@@ -12,6 +12,9 @@
 }
 
 .App h1 {
+  font-family: 'Indie Flower', cursive;
+  width: 280px;
+  line-height: 90%;
   font-weight: 300;
   font-size: 92px;
   margin: 0;
