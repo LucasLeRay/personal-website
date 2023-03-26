@@ -1,0 +1,223 @@
+.App {
+  font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  color: #000;
+  height: 100vh;
+}
+
+.App b {
+  font-weight: bold;
+}
+
+.App p a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #000;
+}
+
+.Left {
+  width: 640px;
+  margin-right: 100px;
+}
+
+.Name {
+  margin: 0 0 42px 0;
+  font-weight: bold;
+}
+
+.Name * {
+  margin: 0;
+  line-height: 91%;
+  
+}
+
+.Name h2 {
+  font-size: 80px;
+  font-weight: normal;
+}
+
+.Name h1 {
+  font-size: 96px;
+}
+
+.Description {
+  margin: 42px 0;
+}
+
+.Description p {
+  margin: 0;
+  line-height: 36px;
+  font-size: 24px;
+}
+
+.Description .Quote {
+  margin: 20px 0 0 0;
+}
+
+.Description p > .Author {
+  font-size: 20px;
+}
+
+.Links {
+  display: flex;
+}
+
+.Links a {
+  position: relative;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+}
+
+.Links a:not(:last-child) {
+  margin-right: 50px;
+}
+
+.Links a:last-child {
+  margin-right: 26px;
+}
+
+.Links a:after {
+  top: 3px;
+  right: -27px;
+  position: absolute;
+  display: inline-flex;
+  content: url('../public/arrow-up-right.svg');
+  width: 26px;
+  height: 26px;
+  transition: all 0.15s ease-in-out;
+}
+
+.Links a:hover:after {
+  transform: translateX(3px) translateY(-3px);
+}
+
+.App img {
+  border-radius: 50%;
+  width: 480px;
+  height: 480px;
+  object-fit: cover;
+}
+
+@media (max-width: 1400px) {
+  .Left {
+    width: 550px;
+    margin-right: 60px;
+  }
+
+  .App img {
+    width: 360px;
+    height: 360px;
+  }
+
+  .Name h2 {
+    font-size: 66px;
+  }
+  
+  .Name h1 {
+    font-size: 80px;
+  }
+
+  .Description p {
+    line-height: 32px;
+    font-size: 20px;
+  }
+  
+  .Description .Quote {
+    margin: 16px 0 0 0;
+  }
+
+  .Description p > .Author {
+    font-size: 18px;
+  }
+
+  .Name {
+    margin: 0 0 36px 0;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 1100px) {
+  .App img {
+    display: none;
+  }
+
+  .Name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+
+  .Left {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .Description {
+    text-align: center;
+    margin: 42px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .Left {
+    margin: 30px;
+    align-items: baseline;
+  }
+
+  .Name {
+    align-items: baseline;
+  }
+
+  .Name h2 {
+    font-size: 54px;
+  }
+
+  .Name h1 {
+    font-size: 66px;
+  }
+
+  .Description {
+    text-align: left;
+    margin: 42px 42px 42px 0;
+  }
+
+  .Description p {
+    line-height: 24px;
+    font-size: 16px;
+  }
+  
+  .Description p > .Author {
+    font-size: 14px;
+  }
+
+  .Links a {
+    font-size: 16px;
+  }
+
+  .Links a:after {
+    width: 18px;
+    height: 18px;
+    top: -3px;
+    right: -20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Links {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .Description {
+    margin-right: 18px;
+  }
+}
