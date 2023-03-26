@@ -2,6 +2,13 @@ import './App.css';
 import profile_src from './img/me.jpg';
 
 function App() {
+  const documentHeight = () => {
+    const doc = document.documentElement
+    doc.style.setProperty('--doc-height', `${window.innerHeight}px`)
+  }
+  window.addEventListener('resize', documentHeight)
+  documentHeight()
+
   return (
     <div className="App">
       <div className="Left">
