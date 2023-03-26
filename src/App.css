@@ -1,4 +1,5 @@
 .App {
+  font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7,51 +8,81 @@
   height: 100vh;
 }
 
-.App > * {
-  margin: 0 50px;
-}
-
-.App h1 {
-  font-family: 'Indie Flower', cursive;
-  width: 280px;
-  line-height: 90%;
-  font-weight: 300;
-  font-size: 92px;
-  margin: 0;
-}
-
 .App b {
-  font-weight: 500;
-}
-
-.App p {
-  margin: 44px 0;
-  line-height: 36px;
-  width: 620px;
-  font-size: 24px;
+  font-weight: bold;
 }
 
 .App p a {
   text-decoration: none;
-  font-weight: 500;
+  font-weight: bold;
   color: #000;
 }
 
-.App .Links {
+.Left {
+  width: 640px;
+  margin-right: 100px;
+}
+
+.Name {
+  margin: 0 0 42px 0;
+  font-weight: bold;
+}
+
+.Name * {
+  margin: 0;
+  line-height: 91%;
+  
+}
+
+.Name h2 {
+  font-size: 80px;
+  font-weight: normal;
+}
+
+.Name h1 {
+  font-size: 96px;
+}
+
+.Description {
+  margin: 42px 0;
+}
+
+.Description p {
+  margin: 0;
+  line-height: 36px;
+  font-size: 24px;
+}
+
+.Description .Quote {
+  margin: 20px 0 0 0;
+}
+
+.Description p > .Author {
+  font-size: 20px;
+}
+
+.Links {
   display: flex;
 }
 
-.App .Links a {
+.Links a {
   position: relative;
   font-size: 24px;
-  margin-right: 50px;
-  font-weight: 500;
+  font-weight: bold;
   text-decoration: none;
   color: #000;
 }
 
-.App .Links a:after {
-  top: -5px;
+.Links a:not(:last-child) {
+  margin-right: 50px;
+}
+
+.Links a:last-child {
+  margin-right: 26px;
+}
+
+.Links a:after {
+  top: 3px;
   right: -27px;
   position: absolute;
   display: inline-flex;
@@ -61,7 +92,7 @@
   transition: all 0.15s ease-in-out;
 }
 
-.App .Links a:hover:after {
+.Links a:hover:after {
   transform: translateX(3px) translateY(-3px);
 }
 
@@ -72,205 +103,121 @@
   object-fit: cover;
 }
 
-@media (max-width: 1600px) {
-  .App span {
-    font-size: 80px;
-  }
-  
-  .App h1 {
-    font-size: 80px;
-  }
-
-  .App p {
-    margin: 36px 0;
-    width: 620px;
-    font-size: 22px;
-  }
-
-  .App .Links a {
-    font-size: 22px;
-  }
-
-  .App .Links a:after {
-    width: 24px;
-    height: 24px;
-  }
-
-  .App img {
-    width: 420px;
-    height: 420px;
-  }
-}
-
 @media (max-width: 1400px) {
-  .App h1 {
-    font-size: 72px;
-  }
-
-  .App p {
-    margin: 32px 0;
-    width: 540px;
-    font-size: 20px;
-  }
-
-  .App .Links a {
-    font-size: 20px;
-  }
-
-  .App .Links a:after {
-    width: 22px;
-    height: 22px;
+  .Left {
+    width: 550px;
+    margin-right: 60px;
   }
 
   .App img {
-    width: 440px;
-    height: 440px;
+    width: 360px;
+    height: 360px;
   }
-}
 
-@media (max-width: 1200px) {
-  .App span {
-    font-size: 60px;
+  .Name h2 {
+    font-size: 66px;
   }
   
-  .App h1 {
-    font-size: 60px;
+  .Name h1 {
+    font-size: 80px;
   }
 
-  .App p {
-    margin: 32px 0;
-    width: 460px;
+  .Description p {
+    line-height: 32px;
     font-size: 20px;
   }
-
-  .App .Links a {
-    font-size: 20px;
+  
+  .Description .Quote {
+    margin: 16px 0 0 0;
   }
 
-  .App .Links a:after {
-    width: 22px;
-    height: 22px;
-  }
-
-  .App img {
-    width: 340px;
-    height: 340px;
-    margin-left: 0;
-  }
-}
-
-@media (max-width: 1000px) {
-  .App h1 {
-    font-size: 52px;
-  }
-
-  .App p {
-    margin: 32px 0;
-    width: 400px;
+  .Description p > .Author {
     font-size: 18px;
   }
 
-  .App .Links a {
-    font-size: 18px;
-  }
-
-  .App .Links a:after {
-    width: 20px;
-    height: 20px;
-  }
-
-  .App img {
-    width: 300px;
-    height: 300px;
-    margin-left: 0;
-    margin-right: 20px;
-  }
-
-  .App > .Left {
-    margin-right: 0;
-    margin-left: 20px;
+  .Name {
+    margin: 0 0 36px 0;
+    font-weight: bold;
   }
 }
 
-@media (max-width: 800px) {
-  .App {
+@media (max-width: 1100px) {
+  .App img {
+    display: none;
+  }
+
+  .Name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+
+  .Left {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
   }
 
-  .App .Left {
-    margin: 0 50px;
-    max-width: 480px;
-  }
-
-  .App h1 {
+  .Description {
     text-align: center;
-    font-size: 36px;
-  }
-
-  .App p {
-    margin: 32px 0;
-    text-align: center;
-    width: auto;
-    line-height: 28px;
-    font-size: 16px;
-  }
-
-  .App img {
-    width: 100%;
-    height: 100%;
-    max-width: 300px;
-    max-height: 300px;
-    margin: 40px auto 0;
-  }
-
-  .App .Links a {
-    margin: 0 0 10px 0;
-    font-size: 16px;
-  }
-
-  .App .Links a:after {
-    top: -6px;
-    right: -26px;
-  }
-
-  .App .Links div {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    width: 100%;
-  }
-
-  .App .Links {
-    justify-content: space-between;
-    margin: 0 24px 0 0;
+    margin: 42px 0;
   }
 }
 
 @media (max-width: 600px) {
-  .App h1 {
-    font-size: 32px;
+  .Left {
+    margin: 30px;
+    align-items: baseline;
   }
 
-  .App img {
-    max-width: 200px;
-    max-height: 200px;
+  .Name {
+    align-items: baseline;
   }
 
-  .App p {
-    margin: 28px 0;
-    width: 100%;
+  .Name h2 {
+    font-size: 54px;
+  }
+
+  .Name h1 {
+    font-size: 66px;
+  }
+
+  .Description {
+    text-align: left;
+    margin: 42px 42px 42px 0;
+  }
+
+  .Description p {
+    line-height: 24px;
+    font-size: 16px;
+  }
+  
+  .Description p > .Author {
+    font-size: 14px;
+  }
+
+  .Links a {
+    font-size: 16px;
+  }
+
+  .Links a:after {
+    width: 18px;
+    height: 18px;
+    top: -3px;
+    right: -20px;
   }
 }
 
 @media (max-width: 480px) {
-  .App .Links {
-    margin-right: 16px;
-    justify-content: space-around;
+  .Links {
+    width: 100%;
+    justify-content: space-between;
   }
 
-  .App .Links div {
-    width: auto;
-    display: flex;
-    flex-direction: column;
+  .Description {
+    margin-right: 18px;
   }
 }
