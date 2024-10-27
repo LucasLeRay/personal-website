@@ -17,7 +17,7 @@ function App() {
           <h1>Le Ray</h1>
         </div>
         <div className="Description">
-          <p>I am a <b>Machine Learning Engineer</b> & <b>MLOps Engineer</b> working at <a href="https://nibble.ai" target="_blank" rel="noopener noreferrer">nibble</a>. My main interests lie in the operationalization of ML initiatives at enterprise scale.</p>
+          <p>I am an <b>A.I. engineer</b>, using artificial intelligence for opinion modeling and behavioral prediction, turning complex human patterns into actionable insights.</p>
           <p className="Quote">“<i>Problems are inevitable. Problems are solvable.</i>”<span className="Author"> - D. Deutsch</span></p>
         </div>
           <div className="Links">
