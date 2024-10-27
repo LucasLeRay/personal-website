@@ -17,7 +17,7 @@ function App() {
           <h1>Le Ray</h1>
         </div>
         <div className="Description">
-          <p>I am an <b>A.I. engineer</b>, using artificial intelligence for opinion modeling and behavioral prediction, turning complex human patterns into actionable insights.</p>
+          <p>I am an <b>A.I. engineer</b>, specialized in opinion modeling and behavioral prediction, turning complex human patterns into actionable insights.</p>
           <p className="Quote">“<i>Problems are inevitable. Problems are solvable.</i>”<span className="Author"> - D. Deutsch</span></p>
         </div>
           <div className="Links">
