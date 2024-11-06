@@ -23,7 +23,7 @@ function App() {
           <div className="Links">
             <a href="mailto:lucas.a.leray@gmail.com" rel="noopener noreferrer">email</a>
             <a href="https://twitter.com/Lucas_Le_Ray" target="_blank" rel="noopener noreferrer">twitter</a>
-            <a href="https://github.com/LucasLeRay" target="_blank" rel="noopener noreferrer">github</a>
+            <a href="https://lucas-le-ray.notion.site/" target="_blank" rel="noopener noreferrer">articles</a>
           </div>
       </div>
       <img src={profile_src} alt="Lucas Le Ray"/>
