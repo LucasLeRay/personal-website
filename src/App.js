@@ -21,7 +21,7 @@ function App() {
           <p className="Quote">“<i>Problems are inevitable. Problems are solvable.</i>”<span className="Author"> - D. Deutsch</span></p>
         </div>
           <div className="Links">
-            <a href="mailto:lucas.a.leray@gmail.com" rel="noopener noreferrer">email</a>
+            <a href="mailto:contact@lucas-le-ray.com" rel="noopener noreferrer">email</a>
             <a href="https://twitter.com/Lucas_Le_Ray" target="_blank" rel="noopener noreferrer">twitter</a>
             <a href="https://lucas-le-ray.notion.site/Lucas-Le-Ray-1313818a7a5d80468438e6b7c4382e13" target="_blank" rel="noopener noreferrer">articles</a>
           </div>
